@@ -1,0 +1,415 @@
+# Base Instructions for Calculator Development
+
+## Core Requirements
+
+Every calculator implementation MUST include the following components:
+
+### 1. Google AdSense Integration
+- **Top Banner Ad**: Place after page title, before calculator widget
+  - Desktop: 728x90 (Leaderboard)
+  - Mobile: 320x50 (Mobile Banner)
+  - Component: `<TopBannerAd />`
+
+- **Inline Ad**: Show after "Calculate" button, before results
+  - Size: 300x250 (Medium Rectangle)
+  - Component: `<InFeedAd />`
+
+- **Mid-Content Ad**: Place in educational content (after 2nd FAQ item)
+  - Desktop: 336x280 (Large Rectangle)
+  - Mobile: 300x250 (Medium Rectangle)
+  - Component: `<MidContentAd />`
+
+- **Desktop Sidebar Ad**: 300x600 skyscraper, sticky positioning
+  - Component: `<SidebarAd />`
+  - Hidden on mobile
+
+- **Mobile Sticky Bottom Ad**: 320x50 anchor ad
+  - Component: `<BottomStickyAd />`
+  - Dismissible with close button
+  - Mobile only
+
+### 2. AI Analysis Integration
+Every calculator MUST include the AI Analysis component:
+
+```typescript
+import { AIAnalysis } from '../../../components/AIAnalysis';
+
+// After calculation results
+<AIAnalysis
+  analysisRequest={{
+    calculatorType: "descriptive_calculator_type",
+    data: {
+      // Include all relevant calculation inputs and outputs
+      // Use descriptive key names
+      // Include context for better AI insights
+    }
+  }}
+/>
+```
+
+**AI Analysis Data Requirements:**
+- Include all user inputs
+- Include all calculated results
+- Include derived metrics (percentages, ratios, etc.)
+- Use clear, descriptive property names
+- Provide sufficient context for meaningful insights
+
+### 3. Educational Content Requirements
+
+Every calculator page MUST include **2000+ words** of educational content with:
+
+#### Content Structure:
+1. **Introduction** (200-300 words)
+   - What is this calculator?
+   - Why it matters
+   - Who should use it
+   - Key benefits
+
+2. **How It Works** (300-400 words)
+   - Step-by-step explanation
+   - Formula breakdown with examples
+   - Visual representation (if applicable)
+   - Common use cases
+
+3. **Detailed Topic Exploration** (800-1000 words)
+   - Deep dive into key concepts
+   - Industry standards/benchmarks
+   - Regional/country-specific considerations
+   - Tables with comparative data
+   - Real-world examples with numbers
+
+4. **Strategies & Tips** (300-400 words)
+   - Best practices
+   - Optimization strategies
+   - Common mistakes to avoid
+   - Expert recommendations
+
+5. **FAQ Section** (300-400 words)
+   - Minimum 5-7 comprehensive questions
+   - Use `<details>` and `<summary>` tags for collapsible answers
+   - Address common user concerns
+   - Include technical and practical questions
+
+#### Writing Style:
+- **Playful yet Expert**: Balance professional knowledge with engaging, conversational tone
+- **Educational**: Teach users, don't just inform them
+- **Actionable**: Provide specific, practical advice
+- **Example-rich**: Use real numbers and scenarios
+- **Accessible**: Explain complex concepts in simple terms
+- **Engaging**: Use analogies, stories, and relatable examples
+
+#### Formatting Requirements:
+- Proper heading hierarchy (H2, H3, H4)
+- Bulleted and numbered lists for readability
+- Tables for data comparison
+- Bold text for key terms and important points
+- Code blocks for formulas (if applicable)
+- Visual breaks using cards and borders
+- Short paragraphs (3-4 sentences max)
+- Scannable content with clear sections
+
+### 4. World-Class Apple-Style UI/UX
+
+#### Design Principles:
+- **Minimalist**: Clean, uncluttered interface
+- **Intuitive**: Self-explanatory controls
+- **Delightful**: Smooth animations and transitions
+- **Accessible**: Clear labels, proper contrast, keyboard navigation
+- **Responsive**: Perfect on all screen sizes
+
+#### Required Components:
+```typescript
+import { AppleStyleInput } from '../../../components/AppleStyleInput';
+import { AppleStyleButton } from '../../../components/AppleStyleButton';
+import { AppleStyleCard } from '../../../components/AppleStyleCard';
+import { SEOHead } from '../../../components/SEOHead';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+```
+
+#### Layout Structure:
+- **Two-column desktop layout** (inputs left, results right)
+- **Single-column mobile layout** (stacked vertically)
+- **Sticky results panel** on desktop (optional)
+- **Responsive breakpoints**: lg (1024px), md (768px), sm (640px)
+
+#### Visual Design:
+- **Color Palette**: Use Tailwind v4 syntax
+  - Primary actions: `bg-blue-600 hover:bg-blue-700`
+  - Success states: `text-green-600 bg-green-50`
+  - Error states: `text-red-600 bg-red-50`
+  - Neutral backgrounds: `bg-gray-50 dark:bg-gray-900`
+  - Text: `text-foreground` (not black/white for dark mode support)
+
+- **Spacing**: Consistent spacing patterns
+  - Sections: `space-y-8` or `gap-8`
+  - Cards: `p-6` or `p-8`
+  - Inputs: `space-y-4`
+  - Buttons: `px-6 py-3`
+
+- **Typography**:
+  - Headings: `text-3xl font-bold` (H1), `text-2xl font-semibold` (H2), `text-xl font-medium` (H3)
+  - Body: `text-base` or `text-lg`
+  - Labels: `text-sm font-medium`
+  - Results: `text-2xl font-bold` or larger for primary metrics
+
+- **Animations**:
+  - Transitions: `transition-all duration-200 ease-in-out`
+  - Hover effects: Subtle scale or color changes
+  - Loading states: Smooth skeleton loaders
+  - Result reveals: Gentle fade-in animations
+
+#### User Experience Features:
+- **Immediate Feedback**: Real-time calculation on input change (optional) or clear "Calculate" button
+- **Input Validation**: Inline error messages, prevent invalid input
+- **Loading States**: Show spinners/skeleton during AI analysis
+- **Empty States**: Helpful placeholder text
+- **Success States**: Clear visual confirmation after calculation
+- **Tooltips**: Helpful hints for complex fields (use `title` attribute or Tooltip component)
+- **Keyboard Support**: Tab navigation, Enter to submit
+- **Mobile Optimization**: Large touch targets (min 44px), proper input types
+
+## Technical Implementation
+
+### File Structure:
+```
+frontend/pages/calculators/[category]/[CalculatorName].tsx
+```
+
+### Required Imports:
+```typescript
+import React, { useState } from 'react';
+import { SEOHead } from '../../../components/SEOHead';
+import { AIAnalysis } from '../../../components/AIAnalysis';
+import { AppleStyleInput } from '../../../components/AppleStyleInput';
+import { AppleStyleButton } from '../../../components/AppleStyleButton';
+import { AppleStyleCard } from '../../../components/AppleStyleCard';
+import { TopBannerAd } from '../../../components/ads/TopBannerAd';
+import { InFeedAd } from '../../../components/ads/InFeedAd';
+import { MidContentAd } from '../../../components/ads/MidContentAd';
+import { SidebarAd } from '../../../components/ads/SidebarAd';
+import { BottomStickyAd } from '../../../components/ads/BottomStickyAd';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { formatCurrency } from '../../../utils/formatting';
+```
+
+### Component Structure:
+```typescript
+export function CalculatorName() {
+  // State management
+  const [input1, setInput1] = useState<number>(0);
+  const [input2, setInput2] = useState<number>(0);
+  const [results, setResults] = useState<ResultType | null>(null);
+  const [showResults, setShowResults] = useState(false);
+
+  // Calculation logic (pure function)
+  const calculateResults = (): ResultType => {
+    // Perform calculations
+    return {
+      // Return all results
+    };
+  };
+
+  // Handle calculate button
+  const handleCalculate = () => {
+    const calculatedResults = calculateResults();
+    setResults(calculatedResults);
+    setShowResults(true);
+  };
+
+  return (
+    <>
+      <SEOHead
+        title="Calculator Name - Smart Calculator Hubs"
+        description="Comprehensive description with keywords..."
+        keywords="keyword1, keyword2, keyword3"
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          
+          {/* Page Title */}
+          <h1 className="text-4xl font-bold text-center mb-8 text-foreground">
+            Calculator Name
+          </h1>
+
+          {/* Top Banner Ad */}
+          <TopBannerAd />
+
+          {/* Main Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+            
+            {/* Left Column: Calculator + Educational Content */}
+            <div className="lg:col-span-2 space-y-8">
+              
+              {/* Calculator Card */}
+              <AppleStyleCard>
+                <CardHeader>
+                  <CardTitle>Enter Your Information</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  
+                  {/* Input fields */}
+                  <AppleStyleInput
+                    label="Input Label"
+                    type="number"
+                    value={input1}
+                    onChange={(e) => setInput1(Number(e.target.value))}
+                    placeholder="0"
+                    prefix="$"
+                  />
+
+                  {/* Calculate Button */}
+                  <AppleStyleButton
+                    onClick={handleCalculate}
+                    className="w-full"
+                  >
+                    Calculate
+                  </AppleStyleButton>
+
+                  {/* Results */}
+                  {showResults && results && (
+                    <div className="space-y-4 animate-fade-in">
+                      {/* Display results */}
+                    </div>
+                  )}
+
+                </CardContent>
+              </AppleStyleCard>
+
+              {/* Inline Ad */}
+              {showResults && <InFeedAd />}
+
+              {/* AI Analysis */}
+              {showResults && results && (
+                <AIAnalysis
+                  analysisRequest={{
+                    calculatorType: "calculator_type",
+                    data: results
+                  }}
+                />
+              )}
+
+              {/* Educational Content (2000+ words) */}
+              <div className="prose prose-lg max-w-none">
+                {/* Educational sections */}
+              </div>
+
+              {/* Mid-Content Ad (after 2nd FAQ) */}
+              <MidContentAd />
+
+            </div>
+
+            {/* Right Column: Sidebar Ad */}
+            <div className="hidden lg:block">
+              <div className="sticky top-8">
+                <SidebarAd />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* Mobile Sticky Bottom Ad */}
+      <BottomStickyAd />
+    </>
+  );
+}
+
+export default CalculatorName;
+```
+
+### SEO Requirements:
+```typescript
+<SEOHead
+  title="[Primary Keyword] - Smart Calculator Hub"
+  description="[150-160 characters with primary and secondary keywords]"
+  keywords="primary keyword, secondary keyword, related term 1, related term 2"
+/>
+```
+
+### Integration Checklist:
+- [ ] Route added to `frontend/App.tsx`
+- [ ] Calculator added to appropriate hub page
+- [ ] Calculator added to `HomePage.tsx` search index
+- [ ] All imports correct
+- [ ] TypeScript types defined
+- [ ] Input validation implemented
+- [ ] Calculations accurate and tested
+- [ ] All 5 ad placements included
+- [ ] AI Analysis integrated
+- [ ] 2000+ words of educational content
+- [ ] Apple-style UI components used
+- [ ] Responsive design tested
+- [ ] SEO optimized
+- [ ] No build errors
+
+## Quality Standards
+
+### Code Quality:
+- **TypeScript**: Proper typing for all variables, props, and functions
+- **Clean Code**: Small, focused components and functions
+- **DRY Principle**: Reusable logic extracted to utilities
+- **Comments**: Only for complex business logic (not obvious code)
+- **Error Handling**: Graceful handling of edge cases
+
+### Performance:
+- **Lazy Loading**: Heavy components loaded on demand
+- **Memoization**: Expensive calculations memoized (if needed)
+- **Optimized Re-renders**: Proper use of React hooks
+- **Bundle Size**: Code splitting where appropriate
+
+### Accessibility:
+- **ARIA Labels**: Proper labels for screen readers
+- **Keyboard Navigation**: Full keyboard support
+- **Focus Management**: Visible focus indicators
+- **Color Contrast**: WCAG AA compliance minimum
+- **Semantic HTML**: Proper heading hierarchy and landmarks
+
+### Testing:
+- **Manual Testing**: Test all calculations with edge cases
+- **Responsive Testing**: Verify on mobile, tablet, desktop
+- **Cross-browser**: Test in Chrome, Firefox, Safari
+- **Accessibility**: Test with keyboard and screen reader
+
+## Example Use Case
+
+When implementing a new calculator:
+
+1. Copy the component structure template
+2. Define TypeScript interfaces for inputs and results
+3. Implement calculation logic in pure functions
+4. Build the input form with AppleStyleInput components
+5. Create results display with proper formatting
+6. Add all 5 ad placements in designated positions
+7. Integrate AI Analysis with comprehensive data
+8. Write 2000+ words of educational content
+9. Add to routes, hub pages, and search index
+10. Test thoroughly and verify all checklist items
+
+## Resources
+
+- **Component Library**: All Apple-style components in `frontend/components/`
+- **Ad Components**: All ad components in `frontend/components/ads/`
+- **Utilities**: Formatting helpers in `frontend/utils/formatting.ts`
+- **Examples**: Check existing calculators for reference patterns
+- **Shadcn UI**: Pre-installed UI components from `@/components/ui/`
+- **Icons**: Lucide React icons available
+
+## Remember
+
+- **User First**: Design for the end user's experience
+- **Educational**: Every calculator should teach, not just compute
+- **Professional**: World-class quality in every detail
+- **Delightful**: Make it enjoyable to use
+- **Fast**: Optimize for performance
+- **Accessible**: Everyone should be able to use it
+- **Mobile-Optimized**: Most users are on mobile devices
+
+---
+
+**This template ensures consistency, quality, and completeness across all calculator implementations.**

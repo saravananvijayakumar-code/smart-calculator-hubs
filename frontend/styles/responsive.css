@@ -1,0 +1,287 @@
+/* Mobile-first responsive design enhancements */
+
+/* Base mobile styles */
+@media (max-width: 640px) {
+  /* Container adjustments */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Apple-style input adjustments for mobile */
+  .apple-input-large {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Card padding adjustments */
+  .mobile-card-padding {
+    padding: 1rem;
+  }
+
+  /* Text size adjustments */
+  .mobile-text-scale h1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
+  .mobile-text-scale h2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .mobile-text-scale h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  /* Grid adjustments */
+  .mobile-grid-single {
+    grid-template-columns: 1fr;
+  }
+
+  /* Button adjustments */
+  .mobile-button-full {
+    width: 100%;
+  }
+
+  /* Navigation adjustments */
+  .mobile-nav-stack {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Breadcrumb adjustments */
+  .mobile-breadcrumbs {
+    font-size: 0.875rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Calculator form adjustments */
+  .mobile-calculator-form {
+    padding: 1rem;
+  }
+
+  /* Results display adjustments */
+  .mobile-results {
+    margin-top: 1.5rem;
+  }
+
+  /* Apple-style card adjustments */
+  .mobile-apple-card {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Two-column grid for tablets */
+  .tablet-grid-two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Card adjustments for tablets */
+  .tablet-card-padding {
+    padding: 1.5rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  /* Three-column grid for desktop */
+  .desktop-grid-three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Full card padding for desktop */
+  .desktop-card-padding {
+    padding: 2rem;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) {
+  /* Increase touch targets for mobile */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Remove hover effects on touch devices */
+  .no-touch-hover:hover {
+    transform: none;
+  }
+
+  /* Ensure touch elements are optimized */
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Improve mobile menu interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
+
+/* High-density displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper borders and shadows */
+  .retina-border {
+    border-width: 0.5px;
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Hide interactive elements */
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* Ensure dark text on light background */
+  .print-text {
+    color: black !important;
+    background: white !important;
+  }
+
+  /* Page break controls */
+  .print-page-break {
+    page-break-before: always;
+  }
+
+  .print-no-break {
+    page-break-inside: avoid;
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations for users who prefer reduced motion */
+  .respect-motion-preference {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  /* Enhanced contrast for accessibility */
+  .high-contrast {
+    border-color: black !important;
+    color: black !important;
+  }
+}
+
+/* Focus management for keyboard navigation */
+.focus-visible:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Safe area adjustments for mobile browsers and PWA */
+@supports (padding: max(0px)) {
+  .safe-area-padding {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  /* PWA-specific fixes for navigation */
+  header {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* PWA standalone mode fixes */
+@media (display-mode: standalone) {
+  /* Prevent white flash on scroll */
+  body {
+    background-color: hsl(var(--background));
+    overflow-x: hidden;
+  }
+
+  /* Fix navigation for PWA */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: hsl(var(--background)) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Ensure proper z-index stacking */
+  main {
+    position: relative;
+    z-index: 1;
+    background-color: hsl(var(--background));
+    min-height: 100vh;
+  }
+
+  /* Mobile menu should have solid background in PWA */
+  .mobile-menu-pwa {
+    background-color: hsl(var(--background));
+    border-top: 1px solid hsl(var(--border));
+  }
+}
+
+/* Utility classes for responsive design */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    padding: 0 3rem;
+  }
+}
+
+/* Responsive text utilities */
+.text-responsive-xl {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .text-responsive-xl {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+/* Responsive spacing utilities */
+.spacing-responsive {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .spacing-responsive {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .spacing-responsive {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "common": {
+    "calculate": "Calculate",
+    "reset": "Reset",
+    "result": "Result",
+    "total": "Total",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "loading": "Loading...",
+    "error": "Error",
+    "invalidInput": "Please enter valid values",
+    "comingSoon": "Coming Soon"
+  },
+  "navigation": {
+    "home": "Home",
+    "calculators": "Calculators",
+    "finance": "Finance",
+    "health": "Health",
+    "math": "Math",
+    "utility": "Utility",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "calculators": {
+    "compoundInterest": {
+      "title": "Compound Interest Calculator",
+      "description": "Calculate compound interest on your investments",
+      "principal": "Principal Amount",
+      "principalPlaceholder": "Enter initial investment",
+      "interestRate": "Annual Interest Rate",
+      "interestRatePlaceholder": "Enter rate as percentage",
+      "timePeriod": "Time Period",
+      "timePeriodPlaceholder": "Enter years",
+      "compoundFrequency": "Compound Frequency",
+      "annually": "Annually",
+      "semiannually": "Semi-annually", 
+      "quarterly": "Quarterly",
+      "monthly": "Monthly",
+      "daily": "Daily",
+      "finalAmount": "Final Amount",
+      "totalInterest": "Total Interest Earned",
+      "tips": [
+        "Compound interest earns interest on both principal and previously earned interest",
+        "More frequent compounding generally results in higher returns",
+        "Even small differences in interest rates can have significant impact over long periods",
+        "Start investing early to maximize the power of compound interest"
+      ]
+    },
+    "mortgage": {
+      "title": "Mortgage Calculator",
+      "description": "Calculate your mortgage payments and total interest",
+      "homePrice": "Home Price",
+      "downPayment": "Down Payment",
+      "loanTerm": "Loan Term (years)",
+      "interestRate": "Interest Rate (%)",
+      "monthlyPayment": "Monthly Payment",
+      "totalPayment": "Total Payment",
+      "totalInterest": "Total Interest"
+    },
+    "loan": {
+      "title": "Loan Calculator", 
+      "description": "Calculate loan payments and total cost",
+      "loanAmount": "Loan Amount",
+      "interestRate": "Interest Rate (%)",
+      "loanTerm": "Loan Term (years)",
+      "monthlyPayment": "Monthly Payment",
+      "totalPayment": "Total Payment",
+      "totalInterest": "Total Interest"
+    },
+    "bmi": {
+      "title": "BMI Calculator",
+      "description": "Calculate your Body Mass Index",
+      "height": "Height",
+      "weight": "Weight",
+      "heightUnit": "feet/inches",
+      "weightUnit": "pounds",
+      "bmiResult": "Your BMI",
+      "category": "Category",
+      "underweight": "Underweight",
+      "normal": "Normal weight",
+      "overweight": "Overweight", 
+      "obese": "Obese"
+    },
+    "currency": {
+      "title": "Currency Converter",
+      "description": "Convert between different currencies",
+      "from": "From",
+      "to": "To",
+      "amount": "Amount",
+      "convertedAmount": "Converted Amount",
+      "exchangeRate": "Exchange Rate"
+    },
+    "tip": {
+      "title": "Tip Calculator",
+      "description": "Calculate tips and split bills",
+      "billAmount": "Bill Amount",
+      "tipPercentage": "Tip Percentage",
+      "numberOfPeople": "Number of People",
+      "tipAmount": "Tip Amount",
+      "totalAmount": "Total Amount",
+      "perPerson": "Per Person"
+    }
+  },
+  "formats": {
+    "dateFormat": "MM/dd/yyyy",
+    "currencyFormat": "en-US",
+    "numberFormat": "en-US"
+  }
+}

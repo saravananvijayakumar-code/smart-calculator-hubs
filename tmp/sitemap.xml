@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" sizes="any" />
+  <title>Leap - AI developer agent that builds and deploys apps to your cloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Leap is a full-stack AI developer agent that works with you, not instead of you. Build full-stack applications and deploy them to your cloud on AWS or GCP." />
+  <meta property="og:title" content="Leap - AI developer agent that builds and deploys apps to your cloud" />
+  <meta property="og:description" content="Leap is a full-stack AI that works with you, not instead of you. Build full-stack applications and deploy them to your cloud on AWS or GCP." />
+  <meta property="og:image" content="https://leap.new/assets/og-image.png" />
+  <meta property="og:url" content="https://leap.new" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Leap - AI developer agent that builds and deploys apps to your cloud" />
+  <meta name="twitter:description" content="Leap is a full-stack AI developer agent that builds and deploys applications to your cloud on AWS or GCP." />
+  <meta name="twitter:image" content="https://leap.new/assets/og-image.png" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17533276895"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17533276895');
+
+    function gtag_report_checkout_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17533276895/F6LFCMma1pQbEN-lwqhB',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  </script>
+  <script type="module" crossorigin src="/assets/index-Bogg3KXC.js"></script>
+</head>
+
+<body>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1371120494642388&ev=PageView&noscript=1"/>
+  </noscript>
+  <div id="root"></div>
+</body>
+
+</html>

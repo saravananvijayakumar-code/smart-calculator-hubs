@@ -1,0 +1,194 @@
+/* PWA-specific styles for mobile devices */
+
+/* PWA Install Banner Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.pwa-install-banner {
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pwa-install-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.pwa-install-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.pwa-install-btn:hover::before {
+  animation: shimmer 1s infinite;
+}
+
+/* Prevent white screen flash on scroll in PWA mode */
+@media (display-mode: standalone) {
+  html {
+    background-color: white;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: white;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix header positioning in PWA */
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 9999;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    html {
+      background-color: hsl(222.2 84% 4.9%);
+    }
+
+    body {
+      background-color: hsl(222.2 84% 4.9%);
+    }
+
+    header {
+      background-color: rgba(9, 9, 11, 0.98) !important;
+    }
+  }
+
+  /* Ensure main content has proper background */
+  main {
+    position: relative;
+    background-color: inherit;
+    min-height: 100vh;
+  }
+
+  /* Safe area insets for notched devices */
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  /* Bottom padding for gesture navigation */
+  footer {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  /* Mobile menu adjustments */
+  .mobile-menu {
+    background-color: inherit;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  /* Prevent overscroll bounce effect */
+  body {
+    overscroll-behavior-y: contain;
+  }
+
+  /* Fix for iOS viewport height */
+  @supports (-webkit-touch-callout: none) {
+    .min-h-screen {
+      min-height: -webkit-fill-available;
+    }
+  }
+}
+
+/* Mobile-first navigation visibility fixes */
+@media (max-width: 768px) {
+  /* Ensure navigation is always visible */
+  header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Mobile menu button visibility */
+  .md\:hidden {
+    display: flex !important;
+  }
+
+  /* Ensure logo and menu button are visible */
+  header .flex.items-center {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  /* Mobile navigation menu */
+  .mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    background-color: inherit;
+  }
+
+  /* Dropdown menu fixes for mobile */
+  [role="menu"] {
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Touch target improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets for touch devices */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Improve mobile dropdown UX */
+  [role="menu"] {
+    font-size: 16px;
+  }
+}
+
+/* Fix for iOS Safari address bar */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+
+  @media (display-mode: standalone) {
+    /* Account for status bar */
+    header {
+      padding-top: max(0.5rem, env(safe-area-inset-top));
+    }
+  }
+}

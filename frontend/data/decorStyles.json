@@ -1,0 +1,232 @@
+{
+  "styles": {
+    "Modern": {
+      "description": "Clean lines, minimalist aesthetic, and focus on functionality. Characterized by neutral colors, sleek furniture, and uncluttered spaces.",
+      "keyElements": [
+        "Clean geometric lines and shapes",
+        "Minimal ornamentation",
+        "Neutral color palette (white, gray, black, beige)",
+        "Natural materials (wood, stone, metal)",
+        "Open floor plans"
+      ],
+      "colorPalette": ["#FFFFFF", "#F5F5F5", "#9E9E9E", "#424242", "#D4B896"],
+      "tips": [
+        "Remove excessive decorations and keep surfaces clear",
+        "Invest in quality statement furniture pieces",
+        "Use subtle textures to add visual interest",
+        "Install simple, streamlined lighting fixtures",
+        "Incorporate abstract or geometric artwork"
+      ],
+      "amazonProducts": "modern minimalist furniture, geometric wall art, led strip lights"
+    },
+    "Scandinavian": {
+      "description": "Light, airy spaces with functionality at the core. Features pale colors, natural materials, and cozy textiles (hygge vibes!).",
+      "keyElements": [
+        "White and light gray walls",
+        "Natural wood furniture",
+        "Cozy textiles (knit blankets, sheepskin rugs)",
+        "Plants and greenery",
+        "Functional, beautiful storage"
+      ],
+      "colorPalette": ["#FFFFFF", "#F0F0F0", "#D4C5B9", "#8B9A8F", "#B8AA9D"],
+      "tips": [
+        "Paint walls white or very light gray",
+        "Add warm wood tones through furniture",
+        "Layer soft textiles for coziness",
+        "Maximize natural light with sheer curtains",
+        "Incorporate indoor plants"
+      ],
+      "amazonProducts": "scandinavian furniture, sheepskin rug, hygge candles"
+    },
+    "Bohemian": {
+      "description": "Eclectic, colorful, and free-spirited. Mix of patterns, textures, and global-inspired decor with a relaxed, artistic vibe.",
+      "keyElements": [
+        "Layered textiles and patterns",
+        "Vibrant colors and metallics",
+        "Vintage and handmade items",
+        "Plants and natural elements",
+        "Collected, curated look"
+      ],
+      "colorPalette": ["#E63946", "#F4A261", "#2A9D8F", "#264653", "#E9C46A"],
+      "tips": [
+        "Mix and match patterns boldly",
+        "Layer rugs and textiles for depth",
+        "Display collections and travel finds",
+        "Add macrame, rattan, and woven pieces",
+        "Use floor cushions and low seating"
+      ],
+      "amazonProducts": "macrame wall hanging, boho throw pillows, rattan furniture"
+    },
+    "Industrial": {
+      "description": "Raw, unfinished aesthetic inspired by warehouses and factories. Exposed brick, metal, and reclaimed wood are key.",
+      "keyElements": [
+        "Exposed brick or concrete walls",
+        "Metal and reclaimed wood furniture",
+        "Open ceilings with pipes/ducts",
+        "Edison bulbs and vintage lighting",
+        "Neutral with pops of bold color"
+      ],
+      "colorPalette": ["#3E3E3E", "#757575", "#A67C52", "#C0C0C0", "#2C2C2C"],
+      "tips": [
+        "Expose brick walls if possible",
+        "Use metal shelving and furniture",
+        "Install Edison bulb pendant lights",
+        "Add vintage industrial accessories",
+        "Keep color palette neutral with metal accents"
+      ],
+      "amazonProducts": "industrial pipe shelves, edison bulb lights, metal bar stools"
+    },
+    "Farmhouse": {
+      "description": "Rustic charm meets cozy comfort. Features distressed wood, vintage finds, and a warm, welcoming atmosphere.",
+      "keyElements": [
+        "Shiplap or wood plank walls",
+        "Vintage and antique pieces",
+        "Farmhouse sink and apron-front details",
+        "Neutral colors with natural textures",
+        "Rustic wood and metal combinations"
+      ],
+      "colorPalette": ["#FFFDF7", "#E8DCC7", "#8B7D6B", "#A9A9A9", "#4A4A4A"],
+      "tips": [
+        "Install shiplap or wood paneling",
+        "Use barn doors or sliding doors",
+        "Display vintage kitchenware and signs",
+        "Add fresh flowers or greenery",
+        "Use white with natural wood accents"
+      ],
+      "amazonProducts": "farmhouse decor, shiplap wallpaper, barn door hardware"
+    },
+    "Mid-Century Modern": {
+      "description": "Retro 1950s-60s style with organic curves, bold colors, and iconic furniture pieces. Clean and timeless.",
+      "keyElements": [
+        "Organic and geometric shapes",
+        "Tapered furniture legs",
+        "Bold accent colors (mustard, teal, orange)",
+        "Starburst clocks and atomic designs",
+        "Mix of wood and plastic materials"
+      ],
+      "colorPalette": ["#F4A261", "#E76F51", "#2A9D8F", "#264653", "#E9C46A"],
+      "tips": [
+        "Invest in iconic mid-century furniture pieces",
+        "Use bold accent colors strategically",
+        "Add geometric patterns and prints",
+        "Install sunburst mirrors or clocks",
+        "Mix warm wood with colorful accents"
+      ],
+      "amazonProducts": "mid century modern furniture, sunburst mirror, retro wall clock"
+    },
+    "Minimalist": {
+      "description": "Less is more. Extremely simplified spaces with only essential furniture and decor. Calm, clutter-free, and intentional.",
+      "keyElements": [
+        "Very few decorative items",
+        "Monochromatic or neutral palette",
+        "Hidden storage solutions",
+        "Quality over quantity",
+        "Negative space as design element"
+      ],
+      "colorPalette": ["#FFFFFF", "#F5F5F5", "#E0E0E0", "#BDBDBD", "#757575"],
+      "tips": [
+        "Declutter ruthlessly - keep only essentials",
+        "Invest in multi-functional furniture",
+        "Use hidden storage to maintain clean lines",
+        "Stick to 2-3 colors maximum",
+        "Embrace empty wall space"
+      ],
+      "amazonProducts": "minimalist storage, floating shelves, hidden storage furniture"
+    },
+    "Coastal": {
+      "description": "Beach-inspired, light and breezy. Features ocean colors, natural textures, and nautical touches.",
+      "keyElements": [
+        "Blue and white color scheme",
+        "Light, weathered wood",
+        "Natural fibers (jute, rattan, linen)",
+        "Nautical and beach-themed decor",
+        "Airy, open feel"
+      ],
+      "colorPalette": ["#A8DADC", "#457B9D", "#F1FAEE", "#E63946", "#FFFFFF"],
+      "tips": [
+        "Use white as base with blue accents",
+        "Add natural fiber rugs and baskets",
+        "Display coral, shells, and driftwood",
+        "Use sheer white curtains for light",
+        "Incorporate nautical stripes"
+      ],
+      "amazonProducts": "coastal decor, jute rug, rope mirror"
+    },
+    "Traditional": {
+      "description": "Classic, elegant, and timeless. Features rich colors, ornate details, and symmetrical arrangements.",
+      "keyElements": [
+        "Symmetrical furniture arrangements",
+        "Rich, warm color palettes",
+        "Ornate details and moldings",
+        "Classic patterns (damask, floral, plaid)",
+        "Antique or antique-style furniture"
+      ],
+      "colorPalette": ["#8B4513", "#DAA520", "#2F4F4F", "#800020", "#F5E6D3"],
+      "tips": [
+        "Arrange furniture symmetrically",
+        "Use classic patterns in textiles",
+        "Add crown molding and wainscoting",
+        "Display antique or heirloom pieces",
+        "Layer window treatments"
+      ],
+      "amazonProducts": "traditional furniture, damask curtains, ornate picture frames"
+    },
+    "Contemporary": {
+      "description": "Current and ever-evolving. Smooth lines, comfortable furnishings, and a mix of textures and materials.",
+      "keyElements": [
+        "Curved and flowing lines",
+        "Mix of textures (smooth, rough, soft)",
+        "Neutral with bold accent colors",
+        "Large windows and natural light",
+        "Comfortable, livable spaces"
+      ],
+      "colorPalette": ["#F0F0F0", "#4A4A4A", "#D4AF37", "#008B8B", "#FFFFFF"],
+      "tips": [
+        "Mix different textures throughout",
+        "Use one or two bold accent colors",
+        "Keep furniture low and streamlined",
+        "Add oversized art pieces",
+        "Incorporate current design trends"
+      ],
+      "amazonProducts": "contemporary furniture, abstract wall art, modern lighting"
+    },
+    "Rustic": {
+      "description": "Nature-inspired with rough, organic textures. Features raw wood, stone, and earthy colors for a cabin-like feel.",
+      "keyElements": [
+        "Rough-hewn wood beams",
+        "Stone or brick accents",
+        "Earthy, natural color palette",
+        "Animal hides and natural textiles",
+        "Handcrafted, artisanal pieces"
+      ],
+      "colorPalette": ["#8B4513", "#654321", "#D2691E", "#A0522D", "#F5DEB3"],
+      "tips": [
+        "Expose natural wood beams if possible",
+        "Use stone for fireplace or accent wall",
+        "Add cowhide or fur rugs",
+        "Display antlers or nature-themed art",
+        "Use wrought iron hardware and fixtures"
+      ],
+      "amazonProducts": "rustic wood furniture, antler decor, stone veneer"
+    },
+    "Eclectic": {
+      "description": "Curated mix of different styles, eras, and colors. Balanced chaos with a cohesive thread tying everything together.",
+      "keyElements": [
+        "Mix of furniture styles and periods",
+        "Bold color combinations",
+        "Global and cultural influences",
+        "Unique statement pieces",
+        "Personal and collected feel"
+      ],
+      "colorPalette": ["#FF6B6B", "#4ECDC4", "#FFE66D", "#95E1D3", "#F38181"],
+      "tips": [
+        "Choose one unifying element (color, texture, etc.)",
+        "Mix high and low-end pieces",
+        "Don't be afraid of bold combinations",
+        "Display personal collections",
+        "Layer patterns and textures"
+      ],
+      "amazonProducts": "eclectic decor, vintage furniture, global textiles"
+    }
+  }
+}

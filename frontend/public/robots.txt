@@ -1,0 +1,39 @@
+# =====================================================
+# SmartCalculatorHubs.com | Optimized robots.txt
+# Purpose: Full SEO + AdSense + Analytics compatibility
+# =====================================================
+
+# Allow all search and ad bots by default
+User-agent: *
+Disallow:
+
+# Allow Google AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# Allow Google Ads landing page quality checks
+User-agent: AdsBot-Google
+Allow: /
+
+# Allow Google site verification bot
+User-agent: Google-Site-Verification
+Allow: /
+
+# Explicitly allow JavaScript, CSS, and image files (for SEO rendering)
+Allow: /*.js$
+Allow: /*.css$
+Allow: /images/
+
+# Disallow internal or admin areas
+Disallow: /admin/
+Disallow: /api/secret/
+Disallow: /_next/
+Disallow: /private/
+
+# Ensure ads.txt and AdSense verification are crawlable
+Allow: /ads.txt
+Allow: /ads-ca-pub-7271075626732183.txt
+Allow: /adsense-verification.html
+
+# Sitemap for faster indexing
+Sitemap: https://smartcalculatorhubs.com/sitemap.xml

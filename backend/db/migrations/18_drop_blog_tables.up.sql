@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS auto_blog_queue CASCADE;
+DROP TABLE IF EXISTS auto_blog_history CASCADE;
+DROP TABLE IF EXISTS auto_blog_settings CASCADE;
+DROP TABLE IF EXISTS blog_posts CASCADE;

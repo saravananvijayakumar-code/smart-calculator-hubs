@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noEmit": true,
+    "checkJs": false,
+    "noImplicitAny": false,
+    "strict": false
+  },
+  "include": ["backend/**/*"],
+  "exclude": ["frontend", "node_modules", "dist"]
+}

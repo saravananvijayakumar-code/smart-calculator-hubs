@@ -1,0 +1,65 @@
+{
+  "cache_rules": {
+    "html": {
+      "pattern": "*.html",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      },
+      "description": "HTML files should never be cached to ensure users get latest content"
+    },
+    "static_assets_hashed": {
+      "pattern": "/assets/**/*-[hash].*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "description": "Hashed static assets can be cached forever since they have unique names"
+    },
+    "static_assets_unhashed": {
+      "pattern": "/assets/**/*",
+      "headers": {
+        "Cache-Control": "public, max-age=86400"
+      },
+      "description": "Non-hashed static assets cached for 1 day"
+    },
+    "images": {
+      "pattern": "*.{png,jpg,jpeg,gif,svg,ico,webp}",
+      "headers": {
+        "Cache-Control": "public, max-age=604800"
+      },
+      "description": "Images cached for 1 week"
+    },
+    "api": {
+      "pattern": "/api/**/*",
+      "headers": {
+        "Cache-Control": "no-cache"
+      },
+      "description": "API responses should not be cached by default"
+    }
+  },
+  "cdn_invalidation": {
+    "automatic": true,
+    "paths": [
+      "/*",
+      "/assets/*",
+      "/api/*"
+    ],
+    "after_deployment": true
+  },
+  "domain_config": {
+    "primary": "www.smartcalculatorhubs.com",
+    "redirects": [
+      {
+        "from": "smartcalculatorhubs.com",
+        "to": "www.smartcalculatorhubs.com",
+        "status": 301,
+        "preserve_path": true
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "force_https": true
+    }
+  }
+}

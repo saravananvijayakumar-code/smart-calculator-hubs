@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Blog Generation</title>
+</head>
+<body>
+  <h1>Test Blog Generation</h1>
+  <button onclick="testGeneration()">Generate Blog Now</button>
+  <pre id="result"></pre>
+
+  <script>
+    async function testGeneration() {
+      const resultEl = document.getElementById('result');
+      resultEl.textContent = 'Loading...';
+      
+      try {
+        const response = await fetch('https://smart-calculator-hub-d3409cs82vjl9890lfm0.api.lp.dev/blog-v2/test-cron-now');
+        const data = await response.json();
+        resultEl.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        resultEl.textContent = 'Error: ' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

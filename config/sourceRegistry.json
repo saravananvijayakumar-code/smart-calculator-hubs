@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "url": "/calculators/health/bmi-calculator",
+      "title": "BMI Calculator",
+      "kind": "calculator",
+      "region": "global"
+    },
+    {
+      "url": "/calculators/health/calorie-calculator",
+      "title": "Calorie Calculator",
+      "kind": "calculator",
+      "region": "global"
+    },
+    {
+      "url": "/calculators/financial/mortgage-calculator",
+      "title": "Mortgage Calculator",
+      "kind": "calculator",
+      "region": "us"
+    },
+    {
+      "url": "/calculators/australia/income-tax-calculator",
+      "title": "Income Tax Calculator Australia",
+      "kind": "calculator",
+      "region": "australia"
+    },
+    {
+      "url": "/ai/tools/instagram-bio-analyzer",
+      "title": "Instagram Bio Analyzer",
+      "kind": "ai_hub",
+      "region": "global"
+    },
+    {
+      "url": "/ai/tools/tiktok-profile-score",
+      "title": "TikTok Profile Score",
+      "kind": "ai_hub",
+      "region": "global"
+    },
+    {
+      "url": "/finder/tools/pet-breed-finder",
+      "title": "Pet Breed Finder",
+      "kind": "tool",
+      "region": "global"
+    },
+    {
+      "url": "/tools/image-compressor",
+      "title": "Image Compressor",
+      "kind": "tool",
+      "region": "global"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "taxYear": "2025-26",
+  "financialYearStart": "2025-07-01",
+  "financialYearEnd": "2026-06-30",
+  "superGuaranteeRate": 0.12,
+  "residentTaxBrackets": [
+    { "min": 0, "max": 18200, "rate": 0, "baseAmount": 0 },
+    { "min": 18201, "max": 45000, "rate": 0.16, "baseAmount": 0 },
+    { "min": 45001, "max": 135000, "rate": 0.30, "baseAmount": 4288 },
+    { "min": 135001, "max": 190000, "rate": 0.37, "baseAmount": 31288 },
+    { "min": 190001, "max": null, "rate": 0.45, "baseAmount": 51638 }
+  ],
+  "nonResidentTaxBrackets": [
+    { "min": 0, "max": 135000, "rate": 0.30, "baseAmount": 0 },
+    { "min": 135001, "max": 190000, "rate": 0.37, "baseAmount": 40500 },
+    { "min": 190001, "max": null, "rate": 0.45, "baseAmount": 60850 }
+  ],
+  "whmTaxBrackets": [
+    { "min": 0, "max": 45000, "rate": 0.15, "baseAmount": 0 },
+    { "min": 45001, "max": 135000, "rate": 0.30, "baseAmount": 6750 },
+    { "min": 135001, "max": 190000, "rate": 0.37, "baseAmount": 33750 },
+    { "min": 190001, "max": null, "rate": 0.45, "baseAmount": 54100 }
+  ],
+  "lito": {
+    "maxOffset": 700,
+    "shadeOutStart": 37500,
+    "shadeOutEnd": 66667,
+    "shadeOutRate": 0.05
+  },
+  "medicareLevy": {
+    "rate": 0.02,
+    "singleThreshold": 26000,
+    "singleShadeInStart": 23226,
+    "familyThreshold": 43846,
+    "familyShadeInStart": 39167,
+    "dependantAdditional": 4027,
+    "seniorsSingleThreshold": 41089,
+    "seniorsSingleShadeInStart": 36676,
+    "seniorsFamilyThreshold": 57198,
+    "seniorsFamilyShadeInStart": 51094,
+    "seniorsDependantAdditional": 4027
+  },
+  "medicareLevySurcharge": {
+    "tiers": [
+      { "singleMin": 0, "singleMax": 97000, "familyMin": 0, "familyMax": 194000, "rate": 0 },
+      { "singleMin": 97001, "singleMax": 113000, "familyMin": 194001, "familyMax": 226000, "rate": 0.01 },
+      { "singleMin": 113001, "singleMax": 151000, "familyMin": 226001, "familyMax": 302000, "rate": 0.0125 },
+      { "singleMin": 151001, "singleMax": null, "familyMin": 302001, "familyMax": null, "rate": 0.015 }
+    ],
+    "dependantIncrement": 1500
+  },
+  "helpRepaymentThresholds": [
+    { "min": 0, "max": 54435, "rate": 0 },
+    { "min": 54436, "max": 62851, "rate": 0.01 },
+    { "min": 62852, "max": 66621, "rate": 0.02 },
+    { "min": 66622, "max": 70619, "rate": 0.025 },
+    { "min": 70620, "max": 74856, "rate": 0.03 },
+    { "min": 74857, "max": 79347, "rate": 0.035 },
+    { "min": 79348, "max": 84108, "rate": 0.04 },
+    { "min": 84109, "max": 89155, "rate": 0.045 },
+    { "min": 89156, "max": 94504, "rate": 0.05 },
+    { "min": 94505, "max": 100175, "rate": 0.055 },
+    { "min": 100176, "max": 106186, "rate": 0.06 },
+    { "min": 106187, "max": 112557, "rate": 0.065 },
+    { "min": 112558, "max": 119310, "rate": 0.07 },
+    { "min": 119311, "max": 126468, "rate": 0.075 },
+    { "min": 126469, "max": 134057, "rate": 0.08 },
+    { "min": 134058, "max": 142101, "rate": 0.085 },
+    { "min": 142102, "max": 150627, "rate": 0.09 },
+    { "min": 150628, "max": 159664, "rate": 0.095 },
+    { "min": 159665, "max": null, "rate": 0.10 }
+  ],
+  "payg": {
+    "weekly": {
+      "scale2": {
+        "coefficients": [
+          { "min": 0, "max": 359, "a": 0, "b": 0 },
+          { "min": 359, "max": 438, "a": 0.19, "b": 68.3462 },
+          { "min": 438, "max": 548, "a": 0.29, "b": 112.1942 },
+          { "min": 548, "max": 721, "a": 0.21, "b": 68.3465 },
+          { "min": 721, "max": 865, "a": 0.219, "b": 74.8369 },
+          { "min": 865, "max": 924, "a": 0.3477, "b": 186.2119 },
+          { "min": 924, "max": 1282, "a": 0.345, "b": 183.5196 },
+          { "min": 1282, "max": 2307, "a": 0.39, "b": 241.2119 },
+          { "min": 2307, "max": 3461, "a": 0.47, "b": 425.6635 },
+          { "min": 3461, "max": null, "a": 0.47, "b": 425.6635 }
+        ],
+        "helpCoefficient": 0.01
+      },
+      "scale6": {
+        "coefficients": [
+          { "min": 0, "max": 359, "a": 0, "b": 0 },
+          { "min": 359, "max": 721, "a": 0.325, "b": 116.5385 },
+          { "min": 721, "max": 865, "a": 0.325, "b": 116.5385 },
+          { "min": 865, "max": 924, "a": 0.3477, "b": 136.1731 },
+          { "min": 924, "max": 2307, "a": 0.345, "b": 133.481 },
+          { "min": 2307, "max": 3461, "a": 0.39, "b": 237.2308 },
+          { "min": 3461, "max": null, "a": 0.47, "b": 514.4231 }
+        ],
+        "helpCoefficient": 0.01
+      }
+    },
+    "fortnightly": {
+      "scale2": {
+        "coefficients": [
+          { "min": 0, "max": 718, "a": 0, "b": 0 },
+          { "min": 718, "max": 876, "a": 0.19, "b": 136.6923 },
+          { "min": 876, "max": 1096, "a": 0.29, "b": 224.3885 },
+          { "min": 1096, "max": 1442, "a": 0.21, "b": 136.6931 },
+          { "min": 1442, "max": 1730, "a": 0.219, "b": 149.6738 },
+          { "min": 1730, "max": 1848, "a": 0.3477, "b": 372.4238 },
+          { "min": 1848, "max": 2564, "a": 0.345, "b": 367.0392 },
+          { "min": 2564, "max": 4614, "a": 0.39, "b": 482.4238 },
+          { "min": 4614, "max": 6922, "a": 0.47, "b": 851.327 },
+          { "min": 6922, "max": null, "a": 0.47, "b": 851.327 }
+        ],
+        "helpCoefficient": 0.01
+      },
+      "scale6": {
+        "coefficients": [
+          { "min": 0, "max": 718, "a": 0, "b": 0 },
+          { "min": 718, "max": 1442, "a": 0.325, "b": 233.0769 },
+          { "min": 1442, "max": 1730, "a": 0.325, "b": 233.0769 },
+          { "min": 1730, "max": 1848, "a": 0.3477, "b": 272.3462 },
+          { "min": 1848, "max": 4614, "a": 0.345, "b": 266.9615 },
+          { "min": 4614, "max": 6922, "a": 0.39, "b": 474.4615 },
+          { "min": 6922, "max": null, "a": 0.47, "b": 1028.8462 }
+        ],
+        "helpCoefficient": 0.01
+      }
+    },
+    "monthly": {
+      "scale2": {
+        "coefficients": [
+          { "min": 0, "max": 1556, "a": 0, "b": 0 },
+          { "min": 1556, "max": 1898, "a": 0.19, "b": 296.1667 },
+          { "min": 1898, "max": 2375, "a": 0.29, "b": 485.8417 },
+          { "min": 2375, "max": 3124, "a": 0.21, "b": 295.8333 },
+          { "min": 3124, "max": 3748, "a": 0.219, "b": 324.1267 },
+          { "min": 3748, "max": 4003, "a": 0.3477, "b": 806.5850 },
+          { "min": 4003, "max": 5556, "a": 0.345, "b": 794.9183 },
+          { "min": 5556, "max": 9997, "a": 0.39, "b": 1044.9183 },
+          { "min": 9997, "max": 14997, "a": 0.47, "b": 1844.7933 },
+          { "min": 14997, "max": null, "a": 0.47, "b": 1844.7933 }
+        ],
+        "helpCoefficient": 0.01
+      },
+      "scale6": {
+        "coefficients": [
+          { "min": 0, "max": 1556, "a": 0, "b": 0 },
+          { "min": 1556, "max": 3124, "a": 0.325, "b": 504.8333 },
+          { "min": 3124, "max": 3748, "a": 0.325, "b": 504.8333 },
+          { "min": 3748, "max": 4003, "a": 0.3477, "b": 589.7500 },
+          { "min": 4003, "max": 9997, "a": 0.345, "b": 578.0833 },
+          { "min": 9997, "max": 14997, "a": 0.39, "b": 1027.9167 },
+          { "min": 14997, "max": null, "a": 0.47, "b": 2227.6667 }
+        ],
+        "helpCoefficient": 0.01
+      }
+    }
+  }
+}

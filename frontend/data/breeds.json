@@ -1,0 +1,206 @@
+{
+  "dogs": {
+    "Labrador Retriever": {
+      "description": "Friendly, outgoing, and active companions who have more than enough affection to go around for a family looking for a medium-to-large dog.",
+      "funFacts": [
+        "Originally bred to retrieve fishing nets in Newfoundland",
+        "Most popular dog breed in the US for 30+ years",
+        "Have webbed toes to help them swim"
+      ],
+      "similar": ["Golden Retriever", "Chesapeake Bay Retriever", "Flat-Coated Retriever"],
+      "amazonProducts": "dog food labrador, dog toys large breed, dog leash training"
+    },
+    "German Shepherd": {
+      "description": "Large, athletic dogs that are courageous, loyal, and highly intelligent. Excellent working dogs and devoted family companions.",
+      "funFacts": [
+        "Second most popular dog breed in the US",
+        "Used extensively as police, military, and service dogs",
+        "Can learn tasks after only 5 repetitions"
+      ],
+      "similar": ["Belgian Malinois", "Dutch Shepherd", "Australian Shepherd"],
+      "amazonProducts": "german shepherd food, dog training collar, dog harness large"
+    },
+    "Golden Retriever": {
+      "description": "Intelligent, friendly, and devoted companions. Known for their beautiful golden coat and gentle temperament.",
+      "funFacts": [
+        "Originally bred in Scotland to retrieve game birds",
+        "One of the most popular family dogs worldwide",
+        "Excellent therapy and service dogs"
+      ],
+      "similar": ["Labrador Retriever", "Irish Setter", "Flat-Coated Retriever"],
+      "amazonProducts": "golden retriever food, dog grooming brush, dog shampoo golden coat"
+    },
+    "French Bulldog": {
+      "description": "Small, muscular dogs with distinctive bat ears and a playful, affectionate nature. Perfect for apartment living.",
+      "funFacts": [
+        "Cannot swim due to heavy front structure",
+        "Third most popular breed in the US",
+        "Originally bred as companions for lace workers in England"
+      ],
+      "similar": ["Boston Terrier", "Pug", "English Bulldog"],
+      "amazonProducts": "french bulldog harness, dog cooling vest, small dog bed"
+    },
+    "Beagle": {
+      "description": "Merry, friendly hounds with an excellent sense of smell. Great family pets who love companionship.",
+      "funFacts": [
+        "Have approximately 220 million scent receptors",
+        "Bred for hunting rabbits and hares",
+        "Snoopy from Peanuts is a beagle"
+      ],
+      "similar": ["Basset Hound", "Foxhound", "Harrier"],
+      "amazonProducts": "beagle food, dog puzzle toys, dog tracking collar"
+    },
+    "Poodle": {
+      "description": "Exceptionally intelligent and active dogs available in three sizes: Standard, Miniature, and Toy. Known for their hypoallergenic coat.",
+      "funFacts": [
+        "Second most intelligent dog breed",
+        "Originally bred as water retrievers in Germany",
+        "Their fancy haircuts were practical for swimming"
+      ],
+      "similar": ["Bichon Frise", "Portuguese Water Dog", "Goldendoodle"],
+      "amazonProducts": "poodle grooming kit, dog hair clippers, hypoallergenic dog food"
+    },
+    "Rottweiler": {
+      "description": "Robust, powerful dogs with a calm confidence and unwavering loyalty. Excellent guard dogs and devoted companions.",
+      "funFacts": [
+        "One of the oldest herding breeds",
+        "Used to drive cattle to market in ancient Rome",
+        "Nearly went extinct in the 1800s"
+      ],
+      "similar": ["Doberman Pinscher", "Cane Corso", "Mastiff"],
+      "amazonProducts": "rottweiler food large breed, heavy duty dog leash, dog training treats"
+    },
+    "Chihuahua": {
+      "description": "The smallest dog breed with a big personality. Loyal, charming, and often sassy companions.",
+      "funFacts": [
+        "Smallest dog breed in the world",
+        "Can live 14-16 years or longer",
+        "Named after the Mexican state of Chihuahua"
+      ],
+      "similar": ["Yorkshire Terrier", "Pomeranian", "Papillon"],
+      "amazonProducts": "chihuahua clothes, small dog carrier, tiny dog food"
+    },
+    "Siberian Husky": {
+      "description": "Medium-sized working dogs with striking blue eyes and thick coats. Energetic, outgoing, and mischievous.",
+      "funFacts": [
+        "Can run up to 30 miles per hour",
+        "Bred by the Chukchi people of Siberia",
+        "Have a double coat that keeps them warm in -60°F"
+      ],
+      "similar": ["Alaskan Malamute", "Samoyed", "Akita"],
+      "amazonProducts": "husky food high protein, dog sled harness, dog winter coat"
+    },
+    "Border Collie": {
+      "description": "The most intelligent dog breed, known for their incredible herding ability and boundless energy.",
+      "funFacts": [
+        "Ranked #1 in intelligence among all dog breeds",
+        "Can learn a new command in less than 5 seconds",
+        "Need 1-2 hours of exercise daily"
+      ],
+      "similar": ["Australian Shepherd", "Australian Cattle Dog", "Shetland Sheepdog"],
+      "amazonProducts": "border collie food, dog agility equipment, herding ball dog toy"
+    }
+  },
+  "cats": {
+    "Siamese": {
+      "description": "Sleek, vocal cats with distinctive color points and striking blue eyes. Very social and affectionate.",
+      "funFacts": [
+        "One of the oldest and most recognizable cat breeds",
+        "Extremely vocal and 'chatty' with their owners",
+        "Born completely white and develop color as they mature"
+      ],
+      "similar": ["Ragdoll", "Birman", "Himalayan"],
+      "amazonProducts": "siamese cat food, cat interactive toys, cat tree tall"
+    },
+    "Maine Coon": {
+      "description": "One of the largest domestic cat breeds with a gentle, friendly nature. Known for their lion-like mane and tufted ears.",
+      "funFacts": [
+        "Can weigh up to 25 pounds",
+        "Excellent mousers despite their gentle nature",
+        "One of the oldest natural breeds in North America"
+      ],
+      "similar": ["Norwegian Forest Cat", "Siberian Cat", "Ragdoll"],
+      "amazonProducts": "maine coon cat food, large cat litter box, cat grooming brush long hair"
+    },
+    "Persian": {
+      "description": "Long-haired, flat-faced cats known for their luxurious coat and calm demeanor. Affectionate lap cats.",
+      "funFacts": [
+        "One of the oldest cat breeds",
+        "Require daily grooming to prevent matting",
+        "Featured in many famous artworks and films"
+      ],
+      "similar": ["Himalayan", "Exotic Shorthair", "Ragdoll"],
+      "amazonProducts": "persian cat food, cat grooming tools, cat eye wipes"
+    },
+    "Bengal": {
+      "description": "Athletic, wild-looking cats with distinctive spotted or marbled coats. Energetic and playful.",
+      "funFacts": [
+        "Bred by crossing domestic cats with Asian Leopard Cats",
+        "Love water and may join you in the shower",
+        "Extremely active and need lots of stimulation"
+      ],
+      "similar": ["Savannah", "Egyptian Mau", "Ocicat"],
+      "amazonProducts": "bengal cat food high protein, cat water fountain, cat climbing tower"
+    },
+    "British Shorthair": {
+      "description": "Round-faced, chunky cats with dense, plush coats. Easygoing and affectionate without being overly demanding.",
+      "funFacts": [
+        "Inspiration for the Cheshire Cat in Alice in Wonderland",
+        "Can live 14-20 years",
+        "Come in over 30 different color combinations"
+      ],
+      "similar": ["Scottish Fold", "Chartreux", "Russian Blue"],
+      "amazonProducts": "british shorthair food, cat bed large, cat toys interactive"
+    },
+    "Ragdoll": {
+      "description": "Large, docile cats that go limp when picked up (hence the name). Blue eyes and semi-long fur.",
+      "funFacts": [
+        "Known for going limp like a ragdoll when held",
+        "One of the largest domestic cat breeds",
+        "Extremely gentle and patient with children"
+      ],
+      "similar": ["Birman", "Maine Coon", "Himalayan"],
+      "amazonProducts": "ragdoll cat food, cat carrier large, cat brush for long hair"
+    },
+    "Scottish Fold": {
+      "description": "Distinctive folded ears give them an owl-like appearance. Sweet-tempered and adaptable.",
+      "funFacts": [
+        "Ears fold due to a genetic mutation",
+        "All kittens are born with straight ears",
+        "Known for sitting in a 'Buddha position'"
+      ],
+      "similar": ["British Shorthair", "American Curl", "Exotic Shorthair"],
+      "amazonProducts": "scottish fold food, cat scratcher, cat window perch"
+    },
+    "Sphynx": {
+      "description": "Hairless cats with wrinkled skin and large ears. Warm to touch and extremely affectionate.",
+      "funFacts": [
+        "Not completely hairless - covered in fine down",
+        "Body temperature is 4°F higher than other cats",
+        "Require regular bathing to remove oil buildup"
+      ],
+      "similar": ["Devon Rex", "Cornish Rex", "Donskoy"],
+      "amazonProducts": "sphynx cat food, cat sweater, cat heating pad"
+    },
+    "Russian Blue": {
+      "description": "Elegant cats with shimmering blue-gray coats and brilliant green eyes. Shy with strangers but loyal to family.",
+      "funFacts": [
+        "Naturally occurring breed from Russia",
+        "Nearly hypoallergenic due to lower protein production",
+        "Known for their gentle smile"
+      ],
+      "similar": ["Korat", "Chartreux", "Nebelung"],
+      "amazonProducts": "russian blue cat food, cat toys mice, quiet cat litter box"
+    },
+    "Abyssinian": {
+      "description": "Sleek, active cats with ticked coats that shimmer. Playful, curious, and highly intelligent.",
+      "funFacts": [
+        "One of the oldest known cat breeds",
+        "Extremely active and need lots of play",
+        "Love to climb to high places"
+      ],
+      "similar": ["Somali", "Singapura", "Oriental Shorthair"],
+      "amazonProducts": "abyssinian cat food, cat climbing wall, cat puzzle feeder"
+    }
+  }
+}

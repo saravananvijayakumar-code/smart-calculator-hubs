@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "skipLibCheck": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "noImplicitAny": false,
+    "strict": false
+  },
+  "include": ["backend/**/*"],
+  "exclude": ["frontend/**/*", "node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+}
