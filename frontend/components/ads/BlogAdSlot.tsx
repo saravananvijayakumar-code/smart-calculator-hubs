@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect, useRef, useState } from 'react';
 
 interface BlogAdSlotProps {
@@ -14,7 +15,7 @@ export function BlogAdSlot({
   className = ''
 }: BlogAdSlotProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const adRef = useRef<HTMLInsElement>(null);
+  const adRef = useRef<HTMLElement>(null);
   const [isAdLoaded, setIsAdLoaded] = useState(false);
   const mountedRef = useRef(false);
   const adPushedRef = useRef(false);

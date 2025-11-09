@@ -8,6 +8,7 @@ import { useToast } from '@/components/ui/use-toast';
 import EnhancedAIAnalysis from '@/components/EnhancedAIAnalysis';
 import { ADS_CONFIG } from '@/config/ads';
 import NativeBanner from '@/components/ads/NativeBanner';
+import AutoAdSlot from '@/components/ads/AutoAdSlot';
 
 declare global {
   interface Window {

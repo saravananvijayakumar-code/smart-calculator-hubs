@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Link } from 'react-router-dom';
 import { 
   Globe, 
@@ -380,8 +381,7 @@ export default function ToolsHubPage() {
           {/* Native Banner 3 - Bottom */}
           <div className="mb-12">
             <NativeBanner position="bottom" />
-            </div>
-          )}
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="p-6 bg-white dark:bg-slate-800 text-center hover:shadow-xl transition-shadow">

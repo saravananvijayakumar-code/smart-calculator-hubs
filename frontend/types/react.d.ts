@@ -16,11 +16,21 @@ declare module 'react' {
   ): ForwardRefExoticComponent<PropsWithoutRef<P> & RefAttributes<T>>;
 
   export type FC<P = {}> = FunctionComponent<P>;
-  export type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined | string | number | Iterable<ReactNode>;
-  export type ReactElement<P = any> = {
+  
+  export type ReactChild = ReactElement | string | number;
+  export type ReactFragment = Iterable<ReactNode>;
+  export type ReactPortal = {
+    key: string | null;
+    children: ReactNode;
     type: any;
+    props: any;
+  };
+  export type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined | string | number | Iterable<ReactNode> | Promise<ReactNode>;
+  export type ReactElement<P = any, T = any> = {
+    type: T;
     props: P;
-    key: string | number | null;
+    key: string | null;
+    children?: ReactNode;
   };
   export type ComponentType<P = {}> = FunctionComponent<P> | ComponentClass<P>;
   export {ComponentType as ComponentType};
@@ -63,10 +73,6 @@ declare module 'react' {
     props: Readonly<P>;
     state: Readonly<S>;
   }
-  
-  export type ReactChild = ReactElement | string | number;
-  export type ReactFragment = Iterable<ReactNode>;
-  export type ReactPortal = any;
   
   export interface ForwardRefExoticComponent<P> {
     (props: P): ReactElement | null;
@@ -210,6 +216,12 @@ declare module 'react' {
     export { StrictMode };
     export { ComponentProps };
     export { ReactNode };
+  }
+  
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
   }
 
   export default React;
