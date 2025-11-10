@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Flame, Monitor, Smartphone } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 import DesktopCalorieCalculator from '@/components/DesktopCalorieCalculator';
 import MobileCameraMode from '@/components/MobileCameraMode';
 import { useCalorieHistoryStore } from '@/stores/calorieHistoryStore';
@@ -129,8 +128,6 @@ export default function CalorieBurnCalculator() {
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 dark:from-gray-900 dark:via-red-900/20 dark:to-gray-900 py-8">
         <div className="container mx-auto px-4 max-w-7xl">
-          <AdsterraSlot position="top" className="mb-6" />
-
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl mb-4 shadow-lg">
               <Flame className="w-10 h-10 text-white" />
@@ -176,8 +173,7 @@ export default function CalorieBurnCalculator() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <div className="lg:col-span-2 space-y-6">
-              <AdsterraSlot position="middle" className="mb-6" />
-              
+
               {showMobileMode ? (
                 <MobileCameraMode 
                   onSwitchToDesktop={() => setForcedMode('desktop')}
@@ -189,8 +185,7 @@ export default function CalorieBurnCalculator() {
             </div>
 
             <div className="space-y-6">
-              <AdsterraSlot position="middle" className="mb-6" />
-              
+
               <Card className="shadow-xl border-0 sticky top-4 bg-gradient-to-br from-white to-orange-50 dark:from-gray-800 dark:to-orange-900/20 animate-slide-in-right">
                 <CardHeader className="pb-4">
                   <CardTitle className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">✨ How AI Camera Works</CardTitle>
@@ -225,8 +220,6 @@ export default function CalorieBurnCalculator() {
               <CardTitle className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 dark:from-orange-400 dark:via-pink-400 dark:to-purple-400 bg-clip-text text-transparent animate-fade-in">🔬 Understanding MET Values and Calorie Burn Science</CardTitle>
             </CardHeader>
             <CardContent className="prose prose-lg max-w-none dark:prose-invert">
-              <AdsterraSlot position="middle" className="my-6" />
-
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 md:p-8 rounded-2xl border-2 border-blue-200 dark:border-blue-700 my-6 transform hover:scale-[1.02] transition-all duration-300 shadow-lg">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3 text-blue-700 dark:text-blue-300">
                   💡 What Are MET Values?
@@ -364,8 +357,6 @@ export default function CalorieBurnCalculator() {
                 </div>
               </div>
 
-              <AdsterraSlot position="middle" className="my-6" />
-
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 p-6 md:p-8 rounded-2xl border-2 border-indigo-200 dark:border-indigo-700 my-8 transform hover:scale-[1.02] transition-all duration-300 shadow-lg">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-indigo-700 dark:text-indigo-300">
                   ⚖️ Why Weight Matters in Calorie Burn
@@ -487,8 +478,6 @@ export default function CalorieBurnCalculator() {
               </ul>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">Factors Affecting Calorie Burn</h2>
-              <AdsterraSlot position="middle" className="my-6" />
-
               <h3 className="text-xl font-semibold mt-6 mb-3">Body Weight and Composition</h3>
               <p>
                 Heavier people burn more calories doing the same activity because they're moving more mass. A 200-pound person 
@@ -858,7 +847,7 @@ export default function CalorieBurnCalculator() {
             </CardContent>
           </Card>
 
-          <AdsterraSlot position="bottom" />
+
         </div>
       </div>
     </>
