@@ -2,11 +2,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "noEmit": true,
+    "noEmit": false,
     "checkJs": false,
     "allowJs": true,
     "noImplicitAny": false,
-    "strict": false
+    "strict": false,
+    "jsx": "react-jsx"
   },
   "include": ["backend/**/*"],
   "exclude": ["node_modules", "frontend/**/*", "dist", "**/*.test.ts", "**/*.spec.ts", "scripts"]

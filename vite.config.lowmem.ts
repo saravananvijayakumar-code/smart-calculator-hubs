@@ -24,9 +24,32 @@ export default defineConfig(async () => {
     },
     dedupe: ["react", "react-dom"],
   },
+  esbuild: {
+    jsx: 'automatic',
+    tsconfigRaw: {
+      compilerOptions: {
+        jsx: 'react-jsx',
+        skipLibCheck: true,
+        noEmit: true,
+        checkJs: false,
+        allowJs: true,
+        noImplicitAny: false,
+        strict: false
+      }
+    }
+  },
   optimizeDeps: {
     include: ["react", "react-dom"],
     force: true,
+    esbuildOptions: {
+      jsx: 'automatic',
+      tsconfigRaw: {
+        compilerOptions: {
+          jsx: 'react-jsx',
+          skipLibCheck: true
+        }
+      }
+    },
   },
   build: {
     target: "esnext",
