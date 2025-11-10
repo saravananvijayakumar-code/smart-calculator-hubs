@@ -1,10 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-export default defineConfig({
-  plugins: [tailwindcss(), react()],
+// Dynamically load Tailwind CSS Vite plugin with fallback
+async function loadTailwindPlugin() {
+  try {
+    const tailwind = await import("@tailwindcss/vite");
+    return tailwind.default();
+  } catch (error) {
+    console.warn("⚠️ @tailwindcss/vite not found, Tailwind will process via CSS @import");
+    return null;
+  }
+}
+
+export default defineConfig(async () => {
+  const tailwindPlugin = await loadTailwindPlugin();
+  
+  return {
+  plugins: [tailwindPlugin, react()].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./frontend"),
@@ -32,4 +45,4 @@ export default defineConfig({
     port: 5173,
     strictPort: false,
   },
-});
+}});

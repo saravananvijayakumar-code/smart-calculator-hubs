@@ -1,7 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
+
+// Dynamically load Tailwind CSS Vite plugin with fallback
+async function loadTailwindPlugin() {
+  try {
+    const tailwind = await import('@tailwindcss/vite')
+    return tailwind.default()
+  } catch (error) {
+    console.warn('⚠️ @tailwindcss/vite not found, Tailwind will process via CSS @import')
+    return null
+  }
+}
 
 /**
  * VITE FULL-OPTIMIZATION BUILD CONFIGURATION
@@ -30,8 +40,9 @@ import path from 'path'
  * - NODE_OPTIONS="--max-old-space-size=4096" recommended
  */
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(async ({ mode }) => {
   const isProduction = mode === 'production'
+  const tailwindPlugin = await loadTailwindPlugin()
   
   return {
     mode: 'production',
@@ -40,7 +51,7 @@ export default defineConfig(({ mode }) => {
       'process.env.NODE_ENV': '"production"'
     },
     
-    plugins: [tailwindcss(), react()],
+    plugins: [tailwindPlugin, react()].filter(Boolean),
     
     resolve: {
       alias: {
