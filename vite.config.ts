@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 // ULTRA-MINIMAL CONFIG for Leap.new 2GB heap limit
@@ -21,7 +22,7 @@ export default defineConfig(({ command, mode }) => {
       'import.meta.env.MODE': '"production"'
     },
     
-    plugins: [react()],
+    plugins: [tailwindcss(), react()],
     
     resolve: {
       alias: {

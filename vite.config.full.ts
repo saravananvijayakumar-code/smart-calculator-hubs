@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 /**
@@ -39,7 +40,7 @@ export default defineConfig(({ mode }) => {
       'process.env.NODE_ENV': '"production"'
     },
     
-    plugins: [react()],
+    plugins: [tailwindcss(), react()],
     
     resolve: {
       alias: {
