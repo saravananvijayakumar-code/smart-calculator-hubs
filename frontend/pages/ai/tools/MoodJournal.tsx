@@ -10,9 +10,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { BookOpen, Sparkles, TrendingUp, Heart, Brain, Twitter, Facebook, MessageCircle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 const moodEmojis = {
   amazing: '😄',
@@ -105,7 +102,7 @@ export default function MoodJournal() {
         keywords="AI mood journal, mental health tracker, wellness journal, emotional intelligence"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -184,7 +181,7 @@ export default function MoodJournal() {
             </CardContent>
           </Card>
 
-          <MidContentAd />
+
 
           {analysis && (
             <>
@@ -487,7 +484,7 @@ export default function MoodJournal() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

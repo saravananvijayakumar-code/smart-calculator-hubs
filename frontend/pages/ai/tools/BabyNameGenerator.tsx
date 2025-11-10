@@ -9,9 +9,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { Baby, Sparkles, Heart, Share2, Copy, RefreshCw, Twitter, Facebook, MessageCircle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 const boyNames = [
   { name: 'Oliver', meaning: 'Olive tree, symbolizing peace', origin: 'Latin' },
@@ -98,7 +95,7 @@ export default function BabyNameGenerator() {
         keywords="AI baby name generator, baby names, name meanings, unique baby names"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -187,7 +184,7 @@ export default function BabyNameGenerator() {
             </CardContent>
           </Card>
 
-          <MidContentAd />
+
 
           {suggestions.length > 0 && (
             <>
@@ -457,7 +454,7 @@ export default function BabyNameGenerator() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

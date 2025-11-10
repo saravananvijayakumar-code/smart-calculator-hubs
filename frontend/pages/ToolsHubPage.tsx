@@ -23,7 +23,6 @@ import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/SEOHead';
 import NativeBanner from '@/components/ads/NativeBanner';
 import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
-import { shouldShowAds } from '@/config/ads';
 
 interface Tool {
   title: string;
@@ -214,12 +213,6 @@ export default function ToolsHubPage() {
               </div>
             </Card>
           </div>
-
-          {shouldShowAds() && (
-            <div className="mb-8">
-              <AutoAdSlot placement="in-article" />
-            </div>
-          )}
 
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">

@@ -13,11 +13,8 @@ import backend from '~backend/client';
 import type { BonusWithholdingResponse } from '~backend/au-tax/types';
 import { SEOHead } from '@/components/SEOHead';
 import ExportShareButtons from '@/components/ExportShareButtons';
-import TopBannerAd from '@/components/ads/TopBannerAd';
 import InFeedAd from '@/components/ads/InFeedAd';
-import MidContentAd from '@/components/ads/MidContentAd';
 import SidebarAd from '@/components/ads/SidebarAd';
-import BottomStickyAd from '@/components/ads/BottomStickyAd';
 
 export default function BonusTaxCalculatorAustralia() {
   const { toast } = useToast();
@@ -101,7 +98,7 @@ export default function BonusTaxCalculatorAustralia() {
           </div>
         </div>
 
-        <TopBannerAd />
+
 
         <div className="grid lg:grid-cols-3 gap-6 mt-8">
           <div className="lg:col-span-2 space-y-6">
@@ -414,7 +411,7 @@ export default function BonusTaxCalculatorAustralia() {
         </div>
 
         {result && <InFeedAd />}
-        <MidContentAd />
+
 
         <Card className="mt-12 p-8">
           <Tabs defaultValue="guide" className="w-full">
@@ -581,7 +578,7 @@ export default function BonusTaxCalculatorAustralia() {
         </Card>
       </div>
 
-      <BottomStickyAd />
+
     </>
   );
 }

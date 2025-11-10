@@ -10,9 +10,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { Sparkles, Copy, RefreshCw, Twitter, Facebook, TrendingUp, Hash } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 const trendingHashtagCategories = {
   business: ['#SmallBusiness', '#Entrepreneur', '#Startup', '#BusinessGrowth', '#Marketing', '#Sales', '#Leadership', '#Innovation', '#Success', '#Productivity'],
@@ -258,7 +255,7 @@ export default function HashtagGenerator() {
         keywords="hashtag generator, trending hashtags, social media hashtags, Instagram hashtags, Twitter hashtags, AI hashtag tool"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -327,7 +324,7 @@ export default function HashtagGenerator() {
             </CardContent>
           </Card>
 
-          <MidContentAd />
+
 
           {generatedHashtags.length > 0 && (
             <Card className="mb-8 border-2 border-blue-200 dark:border-blue-800">
@@ -561,7 +558,7 @@ export default function HashtagGenerator() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

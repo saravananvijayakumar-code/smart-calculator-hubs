@@ -22,11 +22,8 @@ import {
 import { SEOHead } from '@/components/SEOHead';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import EnhancedAIAnalysis from '@/components/EnhancedAIAnalysis';
-import TopBannerAd from '@/components/ads/TopBannerAd';
 import InFeedAd from '@/components/ads/InFeedAd';
-import MidContentAd from '@/components/ads/MidContentAd';
 import SidebarAd from '@/components/ads/SidebarAd';
-import BottomStickyAd from '@/components/ads/BottomStickyAd';
 import AutoAdSlot from '@/components/ads/AutoAdSlot';
 
 type Gender = 'male' | 'female';
@@ -265,7 +262,7 @@ export default function WaistToHipRatioCalculator() {
           </div>
         </div>
 
-        <TopBannerAd className="mb-8" />
+
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
@@ -519,7 +516,7 @@ export default function WaistToHipRatioCalculator() {
               </Card>
             )}
 
-            <MidContentAd />
+
           </div>
 
           <div className="hidden lg:block">
@@ -937,7 +934,7 @@ export default function WaistToHipRatioCalculator() {
         </Card>
       </div>
 
-      <BottomStickyAd />
+
     </>
   );
 }

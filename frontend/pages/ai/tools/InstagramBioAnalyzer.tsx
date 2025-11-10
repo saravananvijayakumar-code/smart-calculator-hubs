@@ -12,9 +12,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { Instagram, Sparkles, Target, Zap, TrendingUp, AlertCircle, Twitter, Facebook, MessageCircle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 import backend from '~backend/client';
 
 interface BioAnalysisResult {
@@ -143,7 +140,7 @@ export default function InstagramBioAnalyzer() {
         keywords="Instagram bio analyzer, bio optimization, Instagram tips, social media growth, bio score, Instagram marketing"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -232,7 +229,7 @@ export default function InstagramBioAnalyzer() {
 
           {analysisResult && (
             <>
-              <MidContentAd />
+
 
               <Card className="mb-8 border-2 border-pink-200 dark:border-pink-800">
                 <CardHeader>
@@ -750,7 +747,7 @@ export default function InstagramBioAnalyzer() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

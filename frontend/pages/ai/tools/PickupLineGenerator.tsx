@@ -10,9 +10,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { MessageCircle, Sparkles, Share2, Copy, RefreshCw, Twitter, Facebook, MessageCircle as WhatsAppIcon } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 const pickupLinesByStyle = {
   funny: [
@@ -100,7 +97,7 @@ export default function PickupLineGenerator() {
         keywords="AI pickup lines, pickup line generator, flirting tips, conversation starters"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
@@ -184,7 +181,7 @@ export default function PickupLineGenerator() {
             </CardContent>
           </Card>
 
-          <MidContentAd />
+
 
           {generatedLine && (
             <Card className="mb-8 border-2 border-pink-200 dark:border-pink-800">
@@ -414,7 +411,7 @@ export default function PickupLineGenerator() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

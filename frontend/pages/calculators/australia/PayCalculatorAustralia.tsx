@@ -15,11 +15,8 @@ import type { PayCalculatorResponse } from '~backend/au-tax/types';
 import { SEOHead } from '@/components/SEOHead';
 import EnhancedAIAnalysis from '@/components/EnhancedAIAnalysis';
 import ExportShareButtons from '@/components/ExportShareButtons';
-import TopBannerAd from '@/components/ads/TopBannerAd';
 import InFeedAd from '@/components/ads/InFeedAd';
-import MidContentAd from '@/components/ads/MidContentAd';
 import SidebarAd from '@/components/ads/SidebarAd';
-import BottomStickyAd from '@/components/ads/BottomStickyAd';
 
 const COMMON_SALARIES = [
   { label: 'Minimum Wage', value: 45000 },
@@ -144,7 +141,7 @@ export default function PayCalculatorAustralia() {
           </div>
         </div>
 
-        <TopBannerAd />
+
 
         <div className="grid lg:grid-cols-3 gap-6 mt-8">
           <div className="lg:col-span-2 space-y-6">
@@ -692,7 +689,7 @@ export default function PayCalculatorAustralia() {
           </div>
         </div>
 
-        <MidContentAd />
+
 
         <div className="mt-12">
           <Card className="p-6">
@@ -863,7 +860,7 @@ export default function PayCalculatorAustralia() {
         </Card>
       </div>
 
-      <BottomStickyAd />
+
     </>
   );
 }

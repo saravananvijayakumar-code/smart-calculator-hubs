@@ -2,8 +2,6 @@ import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '../components/SEOHead';
-import { TopBannerAd } from '../components/ads/TopBannerAd';
-import { MidContentAd } from '../components/ads/MidContentAd';
 
 export function TermsPage() {
   return (
@@ -13,9 +11,6 @@ export function TermsPage() {
         description="Smart Calculator Hub's terms of service outline the rules and regulations for using our financial calculators and website services."
         keywords="terms of service, terms and conditions, Smart Calculator Hub, financial calculators, usage agreement"
       />
-
-      {/* Top Banner Ad */}
-      <TopBannerAd className="bg-gray-50 border-b" />
 
       <div className="container mx-auto px-4 py-8">
         {/* Page Navigation Tabs - Desktop and Mobile */}
@@ -110,11 +105,6 @@ export function TermsPage() {
               consult with qualified financial advisors before making important financial decisions.
             </p>
           </section>
-
-          {/* Mid Content Ad */}
-          <div className="my-8">
-            <MidContentAd />
-          </div>
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Limitations</h2>

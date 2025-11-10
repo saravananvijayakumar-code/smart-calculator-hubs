@@ -10,7 +10,6 @@ import { useToast } from '@/components/ui/use-toast';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import InFeedAd from '@/components/ads/InFeedAd';
-import MidContentAd from '@/components/ads/MidContentAd';
 
 export default function OvulationCalculator() {
   const [lmpDate, setLmpDate] = useState<string>('2025-01-01');
@@ -174,8 +173,6 @@ export default function OvulationCalculator() {
             </p>
           </section>
 
-          <MidContentAd />
-
           <section className="bg-gradient-to-r from-teal-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-xl border-2 border-teal-200">
             <div className="flex items-center gap-3 mb-4">
               <Activity className="w-10 h-10 text-teal-600" />
@@ -309,8 +306,6 @@ export default function OvulationCalculator() {
               </div>
             </div>
           </section>
-
-          <MidContentAd />
 
           <section className="bg-gradient-to-r from-violet-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-xl border-2 border-violet-200">
             <div className="flex items-center gap-3 mb-4">
@@ -537,7 +532,7 @@ export default function OvulationCalculator() {
             </div>
           </section>
 
-          <MidContentAd />
+
 
           <section className="bg-gradient-to-r from-cyan-50 to-teal-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-xl border-2 border-cyan-200">
             <div className="flex items-center gap-3 mb-4">

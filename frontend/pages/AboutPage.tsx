@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '../components/SEOHead';
-import { TopBannerAd } from '../components/ads/TopBannerAd';
-import { MidContentAd } from '../components/ads/MidContentAd';
 
 export function AboutPage() {
   return (
@@ -14,9 +12,6 @@ export function AboutPage() {
         description="Discover SmartCalculatorHub's mission to revolutionize financial planning with AI-powered calculators for Australia, US, UK, and India. Trusted by millions for accurate calculations and intelligent insights."
         keywords="about SmartCalculatorHub, AI financial calculators, mission, team, professional tools, artificial intelligence, financial planning"
       />
-
-      {/* Top Banner Ad */}
-      <TopBannerAd className="bg-gray-50 border-b" />
 
       <div className="container mx-auto px-4 py-8">
         {/* Page Navigation Tabs - Desktop and Mobile */}
@@ -439,9 +434,6 @@ export function AboutPage() {
               </div>
             </CardContent>
           </Card>
-
-          {/* Mid Content Ad */}
-          <MidContentAd className="py-8" />
 
           {/* Technology & Innovation */}
           <Card className="mb-16">

@@ -12,9 +12,7 @@ import { useToast } from '@/components/ui/use-toast';
 import { Bot, Sparkles, Zap, Brain, TrendingUp, AlertCircle, FileText, Gauge } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
 import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 import backend from '~backend/client';
 
 interface DetectionResult {
@@ -121,7 +119,7 @@ export default function AITextDetector() {
         faqItems={faqItems}
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
@@ -727,7 +725,7 @@ export default function AITextDetector() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

@@ -11,9 +11,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { Heart, Sparkles, Share2, Copy, AlertCircle, Twitter, Facebook, MessageCircle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 interface CompatibilityResult {
   compatibilityScore: number;
@@ -93,7 +90,7 @@ export default function AICompatibilityCalculator() {
         keywords="AI compatibility, relationship calculator, compatibility test, AI relationship analysis"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -189,8 +186,6 @@ export default function AICompatibilityCalculator() {
               </Button>
             </CardContent>
           </Card>
-
-          <MidContentAd />
 
           {result && (
             <Card className="mb-8 border-2 border-pink-200 dark:border-pink-800">
@@ -468,7 +463,7 @@ export default function AICompatibilityCalculator() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

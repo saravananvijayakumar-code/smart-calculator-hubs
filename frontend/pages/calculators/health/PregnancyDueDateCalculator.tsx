@@ -10,7 +10,6 @@ import { useToast } from '@/components/ui/use-toast';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import InFeedAd from '@/components/ads/InFeedAd';
-import MidContentAd from '@/components/ads/MidContentAd';
 
 export default function PregnancyDueDateCalculator() {
   const [lmpDate, setLmpDate] = useState<string>('2025-01-01');
@@ -184,8 +183,6 @@ export default function PregnancyDueDateCalculator() {
             </p>
           </section>
 
-          <MidContentAd />
-
           <section className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-xl border-2 border-blue-200">
             <div className="flex items-center gap-3 mb-4">
               <Heart className="w-10 h-10 text-blue-600" />
@@ -227,7 +224,7 @@ export default function PregnancyDueDateCalculator() {
             </p>
           </section>
 
-          <MidContentAd />
+
 
           <section className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-xl border-2 border-orange-200">
             <div className="flex items-center gap-3 mb-4">
@@ -413,7 +410,7 @@ export default function PregnancyDueDateCalculator() {
             </div>
           </section>
 
-          <MidContentAd />
+
 
           <section className="bg-gradient-to-r from-rose-50 to-red-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-xl border-2 border-rose-200">
             <div className="flex items-center gap-3 mb-4">

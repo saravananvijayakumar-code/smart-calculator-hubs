@@ -6,8 +6,6 @@ import { Sparkles, TrendingUp, Instagram, Type, Users } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
 import { AffiliateBanner } from '@/components/AffiliateBanner';
 import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 const socialTools = [
   {
@@ -70,8 +68,6 @@ export default function SocialPage() {
       />
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
-        <TopBannerAd />
-
         <AutoAdSlot placement="top-banner" className="mt-4" />
 
         <div className="container mx-auto px-4 py-12">
@@ -135,8 +131,6 @@ export default function SocialPage() {
         <AffiliateBanner type="amazon-ai" className="mt-12 mx-auto max-w-4xl px-4" />
 
         <AutoAdSlot placement="in-feed" className="mt-8 mx-auto max-w-4xl px-4" />
-
-        <BottomStickyAd />
       </div>
     </>
   );

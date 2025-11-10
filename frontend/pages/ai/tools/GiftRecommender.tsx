@@ -11,9 +11,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { Gift, Sparkles, ExternalLink, Share2, ShoppingBag, Twitter, Facebook, MessageCircle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 
 interface GiftSuggestion {
   name: string;
@@ -116,7 +113,7 @@ export default function GiftRecommender() {
         keywords="AI gift recommender, gift ideas, present suggestions, personalized gifts"
       />
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -235,7 +232,7 @@ export default function GiftRecommender() {
             </CardContent>
           </Card>
 
-          <MidContentAd />
+
 
           {suggestions.length > 0 && (
             <>
@@ -502,7 +499,7 @@ export default function GiftRecommender() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

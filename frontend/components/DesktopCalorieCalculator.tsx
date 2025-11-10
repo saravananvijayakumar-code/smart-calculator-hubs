@@ -13,7 +13,6 @@ import { Pizza, Sparkles, AlertTriangle, Activity, Zap } from 'lucide-react';
 import { getBurnTimeForAllActivities, BurnTimeResult } from '@/lib/calculateBurnTime';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import { InFeedAd } from '@/components/ads/InFeedAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
 
 interface FoodItem {
   name: string;
@@ -303,8 +302,6 @@ export default function DesktopCalorieCalculator({ onAddToHistory }: DesktopCalo
               ))}
             </CardContent>
           </Card>
-
-          <MidContentAd key="desktop-calorie-midcontent" />
 
           <Card className="shadow-xl border-0">
             <CardHeader>

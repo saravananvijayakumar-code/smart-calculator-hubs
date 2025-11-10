@@ -12,9 +12,6 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
 import { Sparkles, TrendingUp, Target, Zap, Instagram, Twitter, Linkedin, Share2, Download, AlertCircle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { TopBannerAd } from '@/components/ads/TopBannerAd';
-import { MidContentAd } from '@/components/ads/MidContentAd';
-import { BottomStickyAd } from '@/components/ads/BottomStickyAd';
 import backend from '~backend/client';
 
 interface ProfileAnalysisResult {
@@ -210,7 +207,7 @@ export default function ProfileAnalyzer() {
         })}
       </script>
 
-      <TopBannerAd />
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -294,7 +291,7 @@ export default function ProfileAnalyzer() {
 
           {analysisResult && (
             <>
-              <MidContentAd />
+
 
               <Card className="mb-8 border-2 border-purple-200 dark:border-purple-800">
                 <CardHeader>
@@ -483,7 +480,7 @@ export default function ProfileAnalyzer() {
         </div>
       </div>
 
-      <BottomStickyAd />
+
     </div>
   );
 }

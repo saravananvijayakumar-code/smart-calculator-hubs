@@ -13,7 +13,6 @@ import { formatCurrency } from '../../../utils/formatting';
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
-import { MidContentAd } from '../../../components/ads/MidContentAd';
 
 const FirstHomeBuyerCalculatorNSW: React.FC = () => {
   const [propertyPrice, setPropertyPrice] = useState<string>('');
@@ -658,8 +657,6 @@ const FirstHomeBuyerCalculatorNSW: React.FC = () => {
                   guarantee schemes but works alongside stamp duty concessions and the First Home Owner Grant.
                 </p>
 
-                <MidContentAd />
-
                 <h3 className="font-semibold text-gray-800 text-lg mt-6 mb-4">First Home Super Saver Scheme (FHSS)</h3>
                 <p>
                   The First Home Super Saver Scheme offers a tax-effective way to save for your first home deposit by making 
@@ -784,7 +781,7 @@ const FirstHomeBuyerCalculatorNSW: React.FC = () => {
                   applying demonstrates readiness for the responsibilities of mortgage debt.
                 </p>
 
-                <MidContentAd />
+
 
                 <h3 className="font-semibold text-gray-800 text-lg mb-4">Property Selection: New vs Established, Apartments vs Houses</h3>
                 <p>

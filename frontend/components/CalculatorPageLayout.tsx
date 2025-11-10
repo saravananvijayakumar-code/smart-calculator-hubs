@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
 import { SEOHead } from './SEOHead';
-import { TopBannerAd } from './ads/TopBannerAd';
-import { MidContentAd } from './ads/MidContentAd';
 import { SidebarAd } from './ads/SidebarAd';
 
 interface CalculatorPageLayoutProps {
@@ -27,9 +25,6 @@ export function CalculatorPageLayout({
         keywords={keywords}
       />
       
-      {/* Top Banner Ad */}
-      <TopBannerAd className="bg-gray-50 border-b" />
-      
       <div className="container mx-auto px-4 py-8">
         <div className={`${showSidebarAd ? 'lg:grid lg:grid-cols-4 lg:gap-8' : ''}`}>
           <div className={showSidebarAd ? 'lg:col-span-3' : ''}>
@@ -44,9 +39,6 @@ export function CalculatorPageLayout({
             </div>
           )}
         </div>
-        
-        {/* Mid Content Ad - shown between content sections */}
-        <MidContentAd className="py-8 mt-8 border-t" />
       </div>
     </div>
   );

@@ -2,8 +2,6 @@ import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '../components/SEOHead';
-import { TopBannerAd } from '../components/ads/TopBannerAd';
-import { MidContentAd } from '../components/ads/MidContentAd';
 
 export function PrivacyPage() {
   return (
@@ -13,9 +11,6 @@ export function PrivacyPage() {
         description="Smart Calculator Hub's privacy policy explains how we collect, use, and protect your personal information when using our financial calculators."
         keywords="privacy policy, data protection, Smart Calculator Hub, financial calculators, user privacy"
       />
-
-      {/* Top Banner Ad */}
-      <TopBannerAd className="bg-gray-50 border-b" />
 
       <div className="container mx-auto px-4 py-8">
         {/* Page Navigation Tabs - Desktop and Mobile */}
@@ -104,11 +99,6 @@ export function PrivacyPage() {
               <li>To detect and prevent fraud or abuse</li>
             </ul>
           </section>
-
-          {/* Mid Content Ad */}
-          <div className="my-8">
-            <MidContentAd />
-          </div>
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Data Security</h2>
