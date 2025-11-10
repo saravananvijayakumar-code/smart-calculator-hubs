@@ -1,4 +1,3 @@
-// Type overrides for React to fix Bun's outdated @types/react
 declare module 'react' {
   export function useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
   export function useState<S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>];
@@ -25,7 +24,10 @@ declare module 'react' {
     type: any;
     props: any;
   };
-  export type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined | string | number | Iterable<ReactNode> | Promise<ReactNode>;
+  
+  type AwaitedReactNode = ReactElement | string | number | boolean | null | undefined;
+  export type ReactNode = AwaitedReactNode | Iterable<ReactNode> | Promise<AwaitedReactNode>;
+  
   export type ReactElement<P = any, T = any> = {
     type: T;
     props: P;
@@ -218,12 +220,13 @@ declare module 'react' {
     export { ReactNode };
   }
   
+  export default React;
+}
+
+declare global {
   namespace JSX {
     interface IntrinsicElements {
       [elemName: string]: any;
     }
   }
-
-  export default React;
 }
-

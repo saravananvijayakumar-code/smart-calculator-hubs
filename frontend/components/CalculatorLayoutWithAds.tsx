@@ -10,7 +10,7 @@ interface CalculatorLayoutWithAdsProps {
   description: string;
   keywords?: string;
   tips?: string[];
-  children: ReactNode;
+  children?: ReactNode;
   showAd?: boolean;
   aiAnalysisRequest?: AnalysisRequest;
   showAIAnalysis?: boolean;

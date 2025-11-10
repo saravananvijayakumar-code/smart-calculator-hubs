@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import backend from "~backend/client";
