@@ -13,8 +13,7 @@ export function Footer() {
               <span className="text-lg font-bold text-gray-900">SmartCalculatorHubs</span>
             </Link>
             <p className="text-sm text-gray-600">
-              Professional calculators for finance, health, math, and everyday tasks. 
-              Free, accurate, and easy to use.
+              Professional calculators for finance, health, math, and everyday tasks.
             </p>
           </div>
 
@@ -75,20 +74,24 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-200 mt-8 pt-8 space-y-4">
+          {/* Important Disclaimer */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 max-w-4xl mx-auto mb-6">
+            <p className="text-sm font-semibold text-yellow-900 mb-2 text-center">⚠️ Important Disclaimer</p>
+            <p className="text-xs text-yellow-800 text-center">
+              The calculators and information provided on this website are for informational and educational purposes only. 
+              They do not constitute professional financial, tax, legal, medical, or investment advice. Results are estimates 
+              based on user inputs and should not be relied upon for making important decisions. Always consult with qualified 
+              professionals before making any financial, legal, health, or investment decisions. We make no warranties regarding 
+              accuracy, completeness, or reliability of any calculator results or content.
+            </p>
+          </div>
+
           <div className="text-center text-xs text-gray-500 max-w-4xl mx-auto space-y-2">
             <p className="font-medium">Advertising & Affiliate Disclosure</p>
             <p>
-              This website uses Google AdSense to display advertisements. Google AdSense uses cookies to serve ads 
-              based on your prior visits to this website or other websites. You can opt out of personalized advertising 
-              by visiting{' '}
-              <a 
-                href="https://www.google.com/settings/ads" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Google Ads Settings
-              </a>.
+              This website displays advertisements provided by Adsterra and other advertising networks. These ads may use 
+              cookies and similar technologies to serve relevant advertisements based on your browsing activity. 
+              You can manage your ad preferences through your browser settings or by opting out of personalized advertising.
             </p>
             <p>
               Smart Calculator Hub is a participant in the Amazon Services LLC Associates Program, an affiliate 
