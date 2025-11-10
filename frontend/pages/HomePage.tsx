@@ -632,7 +632,7 @@ export function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
-                href="https://www.instagram.com/smartcalculatorhub/"
+                href="https://www.instagram.com/quan.tumleapventures/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
@@ -640,12 +640,12 @@ export function HomePage() {
                 <Instagram className="h-6 w-6" />
                 <div className="text-left">
                   <div className="font-semibold">Instagram</div>
-                  <div className="text-sm opacity-90">@smartcalculatorhub</div>
+                  <div className="text-sm opacity-90">@quan.tumleapventures</div>
                 </div>
               </a>
 
               <a
-                href="https://x.com/solforgesolf"
+                href="https://x.com/QUANTUMLEAP_V"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
@@ -653,7 +653,7 @@ export function HomePage() {
                 <FaXTwitter className="h-6 w-6" />
                 <div className="text-left">
                   <div className="font-semibold">X (Twitter)</div>
-                  <div className="text-sm opacity-90">@solforgesolf</div>
+                  <div className="text-sm opacity-90">@QUANTUMLEAP_V</div>
                 </div>
               </a>
             </div>
