@@ -10,11 +10,7 @@ import { SEOHead } from './components/SEOHead';
 import { PWAInstallBanner } from './components/PWAInstallBanner';
 import { OfflineIndicator } from './components/OfflineIndicator';
 import { PWAUpdateNotification } from './components/PWAUpdateNotification';
-import { EzoicProvider } from './components/EzoicProvider';
-import { AdSenseProvider } from './components/AdSenseProvider';
-import AmazonAutoAds from './components/AmazonAutoAds';
 import { CookieConsent } from './components/CookieConsent';
-import PopunderAd from './components/ads/PopunderAd';
 import { LocaleProvider } from './contexts/LocaleContext';
 import { AdminAuthProvider } from './contexts/AdminAuthContext';
 import { UserContextProvider } from './contexts/UserContextProvider';
@@ -207,8 +203,6 @@ const AppContent = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PopunderAd />
-      <AdSenseProvider />
       <AnalyticsTracker />
       <SEOHead />
       <OfflineIndicator />
@@ -420,7 +414,6 @@ const AppContent = () => {
       <PWAUpdateNotification />
       <CookieConsent />
       <Toaster />
-      <AmazonAutoAds />
     </div>
   );
 };
@@ -436,11 +429,6 @@ const App = () => {
       
       const suppressedErrors = [
         'TagError',
-        'adsbygoogle',
-        'amazon-adsystem',
-        'googlesyndication',
-        'google_ad_client',
-        'adbreak',
         'removeChild',
         'The node to be removed is not a child',
       ];

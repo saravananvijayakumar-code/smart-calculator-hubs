@@ -6,10 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { SEOHead } from '../components/SEOHead';
-import { TopBannerAd } from '../components/ads/TopBannerAd';
-import { MidContentAd } from '../components/ads/MidContentAd';
-import { BottomStickyAd } from '../components/ads/BottomStickyAd';
-import { ADS_CONFIG } from '../config/ads';
+import { AdsterraSlot } from '../components/ads/AdsterraSlot';
 import { CalculatorSearch } from '../components/CalculatorSearch';
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { backgroundPrefetch } from '../utils/backgroundPrefetch';
@@ -312,9 +309,6 @@ export function HomePage() {
         keywords="calculator, mortgage calculator, BMI calculator, percentage calculator, financial calculator, online calculator, free calculator"
       />
 
-      {/* Top Banner Ad */}
-      <TopBannerAd className="bg-gray-50 border-b" />
-
       {/* Hero Section */}
       <section className="relative py-12 sm:py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <div className="container mx-auto px-4">
@@ -352,6 +346,13 @@ export function HomePage() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* First Adsterra Ad - After Hero */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <AdsterraSlot className="flex justify-center" />
         </div>
       </section>
 
@@ -495,8 +496,12 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Mid Content Ad */}
-      <MidContentAd className="py-8 bg-white" />
+      {/* Second Adsterra Ad - After Popular Calculators */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <AdsterraSlot className="flex justify-center" />
+        </div>
+      </section>
 
       {/* AI Features Section */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -655,9 +660,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Bottom Sticky Ad */}
-      <BottomStickyAd />
     </div>
   );
 }
