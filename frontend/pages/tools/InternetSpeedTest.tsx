@@ -3,10 +3,8 @@ import { Wifi, Download, Upload, Activity, Gauge, Zap, TrendingUp, Signal, Globe
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import AutoAdSlot from '@/components/ads/AutoAdSlot';
-import { ADS_CONFIG } from '@/config/ads';
 import { SEOHead } from '@/components/SEOHead';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface SpeedTestResults {
   downloadSpeed: number;

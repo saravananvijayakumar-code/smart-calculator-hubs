@@ -2,10 +2,8 @@ import { useState, useEffect } from 'react';
 import { Shield, MapPin, Server, AlertTriangle, CheckCircle, Info, Globe, Lock, Eye, Zap, Target, Award, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import AutoAdSlot from '@/components/ads/AutoAdSlot';
-import { ADS_CONFIG } from '@/config/ads';
 import { SEOHead } from '@/components/SEOHead';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface IPReputationData {
   ip: string;

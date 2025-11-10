@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
-import { AutoAdSlot } from "@/components/ads/AutoAdSlot";
+import { AdsterraSlot } from "@/components/ads/AdsterraSlot";
 import { QRCodeSVG } from "qrcode.react";
 
 export default function SmartShortener() {

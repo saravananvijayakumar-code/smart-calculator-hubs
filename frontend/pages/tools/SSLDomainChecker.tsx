@@ -3,9 +3,8 @@ import { Lock, Shield, Calendar, Globe, CheckCircle, XCircle, AlertTriangle, Awa
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import AutoAdSlot from '@/components/ads/AutoAdSlot';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
 import { SEOHead } from '@/components/SEOHead';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface SSLResults {
   valid: boolean;

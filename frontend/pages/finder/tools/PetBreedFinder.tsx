@@ -8,8 +8,7 @@ import backend from '~backend/client';
 import { compressImage } from '@/lib/imageCompression';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
-import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 import breedsData from '@/data/breeds.json';
 
 interface PetBreedResult {

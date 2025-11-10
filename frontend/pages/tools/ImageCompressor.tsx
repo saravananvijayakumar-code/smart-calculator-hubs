@@ -11,9 +11,8 @@ import {
   Sparkles
 } from 'lucide-react';
 import { AppleStyleCard } from '@/components/AppleStyleCard';
-import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
 import { SEOHead } from '@/components/SEOHead';
-import { AffiliateBanner } from '@/components/AffiliateBanner';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 import { useImageCompressorStore } from '@/stores/imageCompressorStore';
 import {
   compressImage,

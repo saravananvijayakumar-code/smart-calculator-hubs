@@ -3,9 +3,8 @@ import { Monitor, Smartphone, Globe, Eye, Copy, CheckCircle, Wifi, Cpu, HardDriv
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
-import AutoAdSlot from '@/components/ads/AutoAdSlot';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
 import { SEOHead } from '@/components/SEOHead';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface DeviceInfo {
   browser: string;
@@ -136,6 +135,8 @@ Online: ${info.onlineStatus ? 'Yes' : 'No'}
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-indigo-950 dark:to-purple-950">
         <div className="container mx-auto px-4 py-12">
+          <AdsterraSlot position="top" className="mb-6" />
+
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-in">
             <div className="inline-block mb-4">
@@ -149,7 +150,7 @@ Online: ${info.onlineStatus ? 'Yes' : 'No'}
             </p>
           </div>
 
-          <AutoAdSlot placement="top-banner" />
+          <AdsterraSlot position="middle" className="mb-6" />
 
           {/* Quick Actions */}
           {info && (
