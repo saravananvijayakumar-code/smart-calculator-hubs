@@ -2,26 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// Try to load Tailwind CSS Vite plugin with fallback
-async function loadTailwindPlugin() {
-  try {
-    const tailwind = await import('@tailwindcss/vite')
-    return tailwind.default()
-  } catch (error) {
-    console.warn('⚠️ @tailwindcss/vite not found, Tailwind will process via CSS @import')
-    return null
-  }
-}
-
 // ULTRA-MINIMAL CONFIG for Leap.new 2GB heap limit
 // This config is designed to fit within 2GB heap by disabling all memory-intensive operations
 // Trade-off: Larger bundle, but 100% reliable builds
 export default defineConfig(async ({ command, mode }) => {
   // CRITICAL: Override any mode setting to force production
   const isProduction = true
-  
-  // Load Tailwind plugin
-  const tailwindPlugin = await loadTailwindPlugin()
   
   return {
     // CRITICAL: Force production mode explicitly
@@ -35,7 +21,7 @@ export default defineConfig(async ({ command, mode }) => {
       'import.meta.env.MODE': '"production"'
     },
     
-    plugins: [tailwindPlugin, react()].filter(Boolean),
+    plugins: [react()],
     
     resolve: {
       alias: {
