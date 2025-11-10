@@ -64,6 +64,9 @@ export function AboutPage() {
               Pioneering the next generation of financial calculators by combining cutting-edge artificial intelligence 
               with professional-grade accuracy to democratize intelligent financial planning worldwide.
             </p>
+            <p className="text-lg text-purple-600 font-semibold mt-4">
+              Powered by Quantum Leap Ventures Pvt Ltd.
+            </p>
           </div>
 
           {/* Mission & Vision Section */}
@@ -361,10 +364,10 @@ export function AboutPage() {
                 <div>
                   <h4 className="text-lg font-semibold mb-3 text-purple-700">The Beginning (2020-2021)</h4>
                   <p className="mb-4 leading-relaxed">
-                    SmartCalculatorHub was born from a frustrating personal experience. Our founder, a software engineer 
-                    buying his first home in Sydney, struggled to find reliable, accurate mortgage calculators that 
-                    accounted for Australia's unique property market conditions, stamp duty variations, and lending 
-                    regulations. Existing tools were either overly simplistic or prohibitively expensive.
+                    SmartCalculatorHub, a product of Quantum Leap Ventures Pvt Ltd., was born from a frustrating personal 
+                    experience. Our founder, a software engineer buying his first home in Sydney, struggled to find reliable, 
+                    accurate mortgage calculators that accounted for Australia's unique property market conditions, stamp duty 
+                    variations, and lending regulations. Existing tools were either overly simplistic or prohibitively expensive.
                   </p>
                   <p className="mb-4 leading-relaxed">
                     This led to the creation of our first Australian mortgage calculator—built with meticulous attention 
