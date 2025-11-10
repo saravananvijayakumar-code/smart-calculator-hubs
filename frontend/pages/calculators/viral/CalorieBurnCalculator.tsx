@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Flame, Monitor, Smartphone } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 import DesktopCalorieCalculator from '@/components/DesktopCalorieCalculator';
 import MobileCameraMode from '@/components/MobileCameraMode';
 import { useCalorieHistoryStore } from '@/stores/calorieHistoryStore';
@@ -128,6 +129,8 @@ export default function CalorieBurnCalculator() {
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 dark:from-gray-900 dark:via-red-900/20 dark:to-gray-900 py-8">
         <div className="container mx-auto px-4 max-w-7xl">
+          <AdsterraSlot position="top" className="mb-6" />
+
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl mb-4 shadow-lg">
               <Flame className="w-10 h-10 text-white" />
@@ -173,6 +176,7 @@ export default function CalorieBurnCalculator() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <div className="lg:col-span-2 space-y-6">
+              <AdsterraSlot position="middle" className="mb-6" />
 
               {showMobileMode ? (
                 <MobileCameraMode 
@@ -185,6 +189,7 @@ export default function CalorieBurnCalculator() {
             </div>
 
             <div className="space-y-6">
+              <AdsterraSlot position="middle" className="mb-6" />
 
               <Card className="shadow-xl border-0 sticky top-4 bg-gradient-to-br from-white to-orange-50 dark:from-gray-800 dark:to-orange-900/20 animate-slide-in-right">
                 <CardHeader className="pb-4">

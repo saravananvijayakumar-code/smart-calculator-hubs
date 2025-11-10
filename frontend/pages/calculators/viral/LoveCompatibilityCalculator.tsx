@@ -15,6 +15,7 @@ import type { LoveCompatibilityAnalysisData } from '~backend/ai-analysis/types';
 import { AIAnalysis } from '@/components/AIAnalysis';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import { SEOHead } from '@/components/SEOHead';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 const zodiacSigns = [
   "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
@@ -237,6 +238,7 @@ Smart Calculator Hubs
 
       <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <AdsterraSlot position="top" className="mb-8" />
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent px-4">
             ❤️ Love & Compatibility Calculator
@@ -248,6 +250,8 @@ Smart Calculator Hubs
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
             
             <div className="lg:col-span-2 space-y-8">
+              <AdsterraSlot position="middle" className="mb-6" />
+              
               <Card className="border-pink-200 dark:border-pink-900">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -706,6 +710,7 @@ Smart Calculator Hubs
 
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-6">
+                <AdsterraSlot position="middle" />
               </div>
             </div>
           </div>

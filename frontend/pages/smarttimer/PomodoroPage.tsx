@@ -126,6 +126,8 @@ export default function PomodoroPage() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
+          <AdsterraSlot position="top" className="mb-6" />
+
           <Card 
             ref={timerDisplayRef}
             className={`backdrop-blur-xl bg-card/50 border-2 shadow-2xl transition-all ${
@@ -234,6 +236,8 @@ export default function PomodoroPage() {
               </div>
             </CardContent>
           </Card>
+
+          <AdsterraSlot position="middle" className="my-8" />
 
           <AdsterraSlot position="middle" className="my-8" />
 

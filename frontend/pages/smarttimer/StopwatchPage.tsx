@@ -122,6 +122,9 @@ export default function StopwatchPage() {
     >
       <StructuredData type="FAQPage" faqItems={faqItems} />
       <AdsterraSlot position="top" className="mb-8" />
+
+      <AdsterraSlot position="middle" className="mb-8" />
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <Card 
@@ -238,6 +241,8 @@ export default function StopwatchPage() {
               </CardContent>
             </Card>
           )}
+
+          <AdsterraSlot position="middle" className="my-8" />
 
           <AdsterraSlot position="middle" className="my-8" />
 
