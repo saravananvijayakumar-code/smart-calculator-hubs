@@ -98,7 +98,7 @@ export function Footer() {
             </p>
           </div>
           <div className="text-center text-sm text-gray-600 pt-4">
-            <p>&copy; {new Date().getFullYear()} Smart Calculator Hub. All rights reserved. Professional calculators for everyone.</p>
+            <p>&copy; {new Date().getFullYear()} Smart Calculator Hub. Powered by Quantum Leap Ventures Pvt Ltd.</p>
           </div>
         </div>
       </div>
