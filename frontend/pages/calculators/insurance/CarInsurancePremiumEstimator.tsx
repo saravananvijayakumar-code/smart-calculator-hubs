@@ -8,8 +8,7 @@ import { Calculator, Car, Shield, DollarSign, TrendingDown, AlertCircle, Award }
 import { CalculatorLayoutWithAds } from "../../../components/CalculatorLayoutWithAds";
 import EnhancedAIAnalysis from "@/components/EnhancedAIAnalysis";
 import ExportShareButtons from "@/components/ExportShareButtons";
-import { AutoAdSlot } from "@/components/ads/AutoAdSlot";
-import { ADS_CONFIG } from "@/config/ads";
+import { AdsterraSlot } from "@/components/ads/AdsterraSlot";
 
 declare global {
   interface Window {
@@ -79,17 +78,6 @@ export default function CarInsurancePremiumEstimator() {
   useEffect(() => {
     calculatePremium();
   }, [state, age, gender, vehicleAge, vehicleValue, vehicleType, annualKm, parkingLocation, claimsHistory, ncdYears, excess, coverageType]);
-
-  useEffect(() => {
-    // Trigger AdSense auto ads for this premium calculator
-    if (typeof window !== 'undefined' && ADS_CONFIG.AUTO_ADS.ENABLED) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error('AdSense error:', e);
-      }
-    }
-  }, []);
 
   const calculatePremium = () => {
     // Base premium calculation (simplified model)
@@ -202,6 +190,8 @@ export default function CarInsurancePremiumEstimator() {
       description="Estimate your car insurance premium based on age, vehicle, location, and driving history for Australian drivers"
     >
       <div className="space-y-8">
+        <AdsterraSlot position="top" className="mb-6" />
+
         {/* Title */}
         <div className="text-center space-y-4">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white mb-4">
@@ -528,8 +518,7 @@ export default function CarInsurancePremiumEstimator() {
           </div>
         </Card>
 
-        {/* Ad Slot - After Calculator */}
-        <AutoAdSlot placement="in-feed" className="my-8" />
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* AI Analysis Section */}
         {result && (
@@ -554,8 +543,7 @@ export default function CarInsurancePremiumEstimator() {
           />
         )}
 
-        {/* Ad Slot - After AI Analysis */}
-        <AutoAdSlot placement="in-feed" className="my-8" />
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Educational Content Part 1 */}
         <div className="prose prose-lg max-w-none">

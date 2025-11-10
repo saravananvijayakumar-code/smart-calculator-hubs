@@ -12,6 +12,7 @@ import { AIAnalysis } from '../../../components/AIAnalysis';
 import EnhancedAIAnalysis from '../../../components/EnhancedAIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useFormatting } from '../../../utils/formatting';
+import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface InvestmentResult {
@@ -196,6 +197,8 @@ export function InvestmentCalculator() {
       keywords="investment calculator, portfolio calculator, asset allocation calculator, investment returns, portfolio growth, investment planning, financial calculator"
     >
       <div className="max-w-6xl mx-auto space-y-8">
+        <AdsterraSlot position="top" className="mb-6" />
+
         {/* Input Form */}
         <Card>
           <CardHeader>
@@ -302,6 +305,8 @@ export function InvestmentCalculator() {
             </div>
           </CardContent>
         </Card>
+
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Results */}
         {result && result.isValid && (
@@ -544,6 +549,8 @@ export function InvestmentCalculator() {
             />
           </div>
         )}
+
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Educational Content */}
         <div className="space-y-8">

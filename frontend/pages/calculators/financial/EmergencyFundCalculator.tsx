@@ -11,6 +11,7 @@ import { CalculatorLayoutWithAds } from '../../../components/CalculatorLayoutWit
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useFormatting } from '../../../utils/formatting';
+import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface EmergencyFundResult {
@@ -150,6 +151,8 @@ export default function EmergencyFundCalculator() {
       tips={tips}
     >
       <div className="max-w-6xl mx-auto space-y-8">
+        <AdsterraSlot position="top" className="mb-6" />
+
         {/* Input Form */}
         <Card>
           <CardHeader>
@@ -248,6 +251,8 @@ export default function EmergencyFundCalculator() {
             )}
           </CardContent>
         </Card>
+
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Results */}
         {result.isValid && (
@@ -439,6 +444,8 @@ export default function EmergencyFundCalculator() {
             </Card>
           </div>
         )}
+
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Educational Content */}
         <div className="space-y-8">

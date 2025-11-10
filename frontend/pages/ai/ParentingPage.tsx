@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Baby, Sparkles, Sparkle } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
-import { AffiliateBanner } from '@/components/AffiliateBanner';
-import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const aiTools = [
@@ -40,9 +39,7 @@ export default function ParentingPage() {
             </p>
           </div>
 
-          <AutoAdSlot placement="top-banner" className="mb-8" />
-
-          <AutoAdSlot placement="in-feed" className="mb-8" />
+          <AdsterraSlot position="top" className="mb-6" />
 
           <div className="grid md:grid-cols-2 gap-6">
             {aiTools.map((tool) => {
@@ -85,14 +82,12 @@ export default function ParentingPage() {
                 Revolutionizing Parenting Through Artificial Intelligence
               </h2>
               
-              <AutoAdSlot placement="mid-content" className="my-8" />
+              <AdsterraSlot position="middle" className="my-6" />
 
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed mb-6">
                   Parenting represents one of life's most profound journeys, filled with countless decisions that shape a child's future. From the moment you discover you're expecting, through childhood milestones, educational choices, and developmental challenges, modern parents face an overwhelming array of decisions with lasting implications. Artificial intelligence has emerged as a transformative resource for navigating these decisions, offering personalized insights, cultural wisdom, and data-driven guidance that complements parental instinct with technological intelligence.
                 </p>
-
-                <AutoAdSlot placement="in-article" className="my-8" />
 
                 <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">The Modern Parenting Landscape</h3>
                 <p className="leading-relaxed mb-4">
@@ -110,8 +105,6 @@ export default function ParentingPage() {
                   The traditional baby naming process often proves challenging and emotionally fraught. Parents must balance multiple competing considerations: family traditions and honoring relatives, cultural heritage and religious significance, current popularity trends versus timeless classics, potential nicknames and teasing risks, sibling name coordination, and pronunciation across different languages. Many couples spend months deliberating, consulting name books, browsing websites, and still struggle to find options that resonate with both partners.
                 </p>
 
-                <AutoAdSlot placement="mid-content" className="my-8" />
-
                 <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">How AI Transforms the Baby Naming Experience</h3>
                 <p className="leading-relaxed mb-4">
                   AI-powered baby name generators revolutionize this process by analyzing millions of names across cultures, historical periods, and linguistic traditions. Advanced algorithms understand complex relationships between names, recognizing that parents who love "Olivia" might also appreciate "Ophelia" or "Aurelia" based on phonetic patterns, stylistic elements, and cultural contexts. These systems learn from your preferences, offering increasingly refined suggestions as you indicate likes and dislikes.
@@ -119,8 +112,6 @@ export default function ParentingPage() {
                 <p className="leading-relaxed mb-4">
                   Modern AI naming tools go far beyond simple database searches. They analyze semantic meanings, tracing etymologies across languages and historical periods. They recognize cultural significance, understanding that certain names carry different connotations in different communities. They evaluate popularity trends, helping parents understand whether a name they love is enjoying a resurgence that might lead to classroom confusion, or represents a timeless choice that remains consistently used without becoming overexposed.
                 </p>
-
-                <AutoAdSlot placement="in-article" className="my-8" />
 
                 <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Cultural Intelligence in Name Selection</h3>
                 <p className="leading-relaxed mb-4">
@@ -263,11 +254,7 @@ export default function ParentingPage() {
             </div>
           </div>
 
-          <AutoAdSlot placement="bottom-sticky" className="mt-8" />
-
-          <AffiliateBanner type="amazon-parenting" className="mt-12" />
-
-          <AutoAdSlot placement="in-feed" className="mt-8" />
+          <AdsterraSlot position="middle" className="my-6" />
         </div>
       </div>
     </div>

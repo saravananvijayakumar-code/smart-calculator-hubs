@@ -13,6 +13,7 @@ import { CalculatorLayoutWithAds } from '../../../components/CalculatorLayoutWit
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useFormatting } from '../../../utils/formatting';
+import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface CompoundInterestResult {
@@ -230,6 +231,8 @@ export default function CompoundInterestCalculator() {
       keywords="compound interest calculator, investment calculator, savings growth calculator, compounding frequency, investment returns, financial calculator"
     >
       <div className="max-w-6xl mx-auto space-y-8">
+        <AdsterraSlot position="top" className="mb-6" />
+
         {/* Input Form */}
         <Card>
           <CardHeader>
@@ -316,6 +319,8 @@ export default function CompoundInterestCalculator() {
             </div>
           </CardContent>
         </Card>
+
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Results */}
         {result.isValid && (
@@ -469,6 +474,8 @@ export default function CompoundInterestCalculator() {
             )}
           </div>
         )}
+
+        <AdsterraSlot position="middle" className="my-6" />
 
         {/* Educational Content */}
         <div className="space-y-8">
