@@ -4,8 +4,7 @@ import { Play, Pause, RotateCcw, Flag, Maximize, Timer } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { SmartTimerLayout } from '../../components/SmartTimerLayout';
-import AutoAdSlot from '../../components/ads/AutoAdSlot';
-import AmazonAffiliate from '../../components/ads/AmazonAffiliate';
+import { AdsterraSlot } from '../../components/ads/AdsterraSlot';
 import { useTimerStore } from '../../stores/timerStore';
 import { useKeyboardShortcuts, useFullscreen } from '../../hooks/useKeyboardShortcuts';
 import { StructuredData } from '../../components/StructuredData';
@@ -122,8 +121,7 @@ export default function StopwatchPage() {
       keywords="stopwatch, timer, lap timer, precision timer, online stopwatch, professional stopwatch"
     >
       <StructuredData type="FAQPage" faqItems={faqItems} />
-      <AutoAdSlot placement="top-banner" className="mb-8" />
-      <AutoAdSlot placement="in-feed" className="mb-8" />
+      <AdsterraSlot position="top" className="mb-8" />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <Card 
@@ -241,11 +239,7 @@ export default function StopwatchPage() {
             </Card>
           )}
 
-          <AutoAdSlot placement="mid-content" className="my-8" />
-
-          <AutoAdSlot placement="in-feed" className="my-8" />
-
-          <AutoAdSlot placement="in-article" className="my-8" />
+          <AdsterraSlot position="middle" className="my-8" />
 
           <Card className="backdrop-blur-xl bg-card/50 border-2">
             <CardContent className="p-6 md:p-8 prose prose-sm max-w-none dark:prose-invert">
@@ -561,11 +555,10 @@ export default function StopwatchPage() {
             </CardContent>
           </Card>
 
-          <AutoAdSlot placement="sidebar" />
-          <AmazonAffiliate calculatorTitle="Stopwatch" placement="sidebar" className="sticky top-4" />
+          <AdsterraSlot position="middle" />
         </div>
       </div>
-      <AutoAdSlot placement="bottom-sticky" />
+      <AdsterraSlot position="bottom" />
     </SmartTimerLayout>
   );
 }

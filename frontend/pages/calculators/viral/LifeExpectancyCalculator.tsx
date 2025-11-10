@@ -13,8 +13,7 @@ import { Clock, Sparkles, Share2, AlertTriangle, Heart, TrendingUp, Award, Calen
 import { AIAnalysis } from '@/components/AIAnalysis';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import { SEOHead } from '@/components/SEOHead';
-import { InFeedAd } from '@/components/ads/InFeedAd';
-import { SidebarAd } from '@/components/ads/SidebarAd';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface LifeExpectancyResults {
   lifeExpectancy: number;
@@ -516,7 +515,7 @@ export default function LifeExpectancyCalculator() {
                     </Card>
                   </div>
 
-                  <InFeedAd />
+                  <AdsterraSlot position="middle" />
 
                   <Card className="shadow-xl border-0">
                     <CardHeader>
@@ -605,7 +604,7 @@ export default function LifeExpectancyCalculator() {
             </div>
 
             <div className="space-y-6">
-              <SidebarAd />
+              <AdsterraSlot position="middle" />
               
               <Card className="shadow-xl border-0 sticky top-4">
                 <CardHeader>

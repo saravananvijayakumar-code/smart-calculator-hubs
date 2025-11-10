@@ -15,10 +15,7 @@ import type { LoveCompatibilityAnalysisData } from '~backend/ai-analysis/types';
 import { AIAnalysis } from '@/components/AIAnalysis';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import { SEOHead } from '@/components/SEOHead';
-import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
-import { InFeedAd } from '@/components/ads/InFeedAd';
-import { SidebarAd } from '@/components/ads/SidebarAd';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 const zodiacSigns = [
   "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
@@ -249,14 +246,12 @@ Smart Calculator Hubs
             Discover your romantic compatibility through astrology, numerology, and cosmic alignment ✨
           </p>
 
-          <AutoAdSlot placement="top-banner" className="mb-8" />
-
-          <AutoAdSlot placement="mid-content" className="my-8" />
+          <AdsterraSlot position="top" className="mb-8" />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
             
             <div className="lg:col-span-2 space-y-8">
-              <AutoAdSlot placement="in-feed" className="mb-6" />
+              <AdsterraSlot position="middle" className="mb-6" />
               
               <Card className="border-pink-200 dark:border-pink-900">
                 <CardHeader>
@@ -502,10 +497,8 @@ Smart Calculator Hubs
                     </CardContent>
                   </Card>
 
-                  <InFeedAd />
-
                   <div className="my-8">
-                    <AutoAdSlot placement="mid-content" />
+                    <AdsterraSlot position="middle" />
                   </div>
 
                   {analysisData && (
@@ -545,7 +538,7 @@ Smart Calculator Hubs
               )}
 
               <div className="my-8">
-                <InFeedAd index={1} />
+                <AdsterraSlot position="middle" />
               </div>
 
               <Card>
@@ -726,20 +719,12 @@ Smart Calculator Hubs
 
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-6">
-                <SidebarAd />
-                <AutoAdSlot placement="sidebar" />
-                <AmazonAffiliate calculatorTitle="Love Compatibility Calculator" placement="sidebar" />
+                <AdsterraSlot position="middle" />
               </div>
             </div>
           </div>
 
-          <AutoAdSlot placement="in-article" className="my-8" />
-
-          <AutoAdSlot placement="in-feed" className="my-8" />
-
-          <AutoAdSlot placement="mid-content" className="my-8" />
-
-          <AutoAdSlot placement="bottom-sticky" />
+          <AdsterraSlot position="bottom" className="my-8" />
         </div>
       </div>
     </>

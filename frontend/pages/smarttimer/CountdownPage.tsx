@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { SmartTimerLayout } from '../../components/SmartTimerLayout';
-import AutoAdSlot from '../../components/ads/AutoAdSlot';
+import { AdsterraSlot } from '../../components/ads/AdsterraSlot';
 import { useTimerStore } from '../../stores/timerStore';
 import { useKeyboardShortcuts, useFullscreen } from '../../hooks/useKeyboardShortcuts';
 
@@ -303,7 +303,7 @@ export default function CountdownPage() {
             </CardContent>
           </Card>
 
-          <AutoAdSlot placement="mid-content" className="my-8" />
+          <AdsterraSlot position="middle" className="my-8" />
 
           <Card className="backdrop-blur-xl bg-card/50 border-2">
             <CardContent className="p-6 md:p-8 prose prose-sm max-w-none dark:prose-invert">
@@ -604,7 +604,7 @@ export default function CountdownPage() {
             </CardContent>
           </Card>
 
-          <AutoAdSlot placement="sidebar" />
+          <AdsterraSlot position="middle" />
         </div>
       </div>
     </SmartTimerLayout>

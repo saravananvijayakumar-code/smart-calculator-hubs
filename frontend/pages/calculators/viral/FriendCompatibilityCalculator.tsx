@@ -12,8 +12,7 @@ import { Users, Sparkles, Share2, AlertTriangle, Heart, Zap, Brain, Trophy, Musi
 import EnhancedAIAnalysis from '@/components/EnhancedAIAnalysis';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import { SEOHead } from '@/components/SEOHead';
-import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface FriendshipResults {
   totalScore: number;
@@ -332,7 +331,7 @@ export default function FriendCompatibilityCalculator() {
 
       <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-pink-50 dark:from-gray-900 dark:via-orange-900/20 dark:to-gray-900 py-8">
         <div className="container mx-auto px-4 max-w-7xl">
-          <AutoAdSlot placement="top-banner" className="mb-6" />
+          <AdsterraSlot position="top" className="mb-6" />
 
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-3xl mb-4 shadow-lg">
@@ -495,7 +494,7 @@ export default function FriendCompatibilityCalculator() {
                     </Card>
                   </div>
 
-                  <AutoAdSlot placement="in-feed" className="my-6" />
+                  <AdsterraSlot position="middle" className="my-6" />
 
                   <Card className="shadow-xl border-0 bg-gradient-to-br from-white via-orange-50/30 to-pink-50/30 dark:from-gray-800 dark:via-orange-900/10 dark:to-pink-900/10">
                     <CardHeader>
@@ -551,7 +550,7 @@ export default function FriendCompatibilityCalculator() {
                     }}
                   />
 
-                  <AutoAdSlot placement="in-feed" className="my-6" />
+                  <AdsterraSlot position="middle" className="my-6" />
 
                   <Card className="shadow-xl border-0 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-green-900/20 dark:via-emerald-900/20 dark:to-teal-900/20 overflow-hidden relative">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-green-400/10 rounded-full blur-3xl"></div>
@@ -655,8 +654,7 @@ export default function FriendCompatibilityCalculator() {
             </div>
 
             <div className="space-y-6">
-              <AutoAdSlot placement="sidebar" className="sticky top-4" />
-              <AmazonAffiliate calculatorTitle="Friend Compatibility Calculator" placement="sidebar" className="sticky top-4" />
+              <AdsterraSlot position="middle" className="sticky top-4" />
               
               <Card className="shadow-xl border-0 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20">
                 <CardHeader>
@@ -694,7 +692,7 @@ export default function FriendCompatibilityCalculator() {
             </div>
           </div>
 
-          <AutoAdSlot placement="mid-content" className="my-8" />
+          <AdsterraSlot position="middle" className="my-8" />
 
           <Card className="shadow-xl border-0 mb-8 bg-gradient-to-br from-white via-purple-50/20 to-pink-50/20 dark:from-gray-800 dark:via-purple-900/10 dark:to-pink-900/10">
             <CardHeader>
@@ -804,7 +802,7 @@ export default function FriendCompatibilityCalculator() {
 
               <AutoAdSlot placement="in-feed" className="my-6" />
 
-              <AutoAdSlot placement="in-article" className="my-6" />
+              <AdsterraSlot position="middle" className="my-6" />
 
               <h2 className="text-2xl font-bold mt-8 mb-4 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">How to Strengthen Any Friendship</h2>
 
@@ -986,9 +984,9 @@ export default function FriendCompatibilityCalculator() {
             </CardContent>
           </Card>
 
-          <AutoAdSlot placement="mid-content" className="my-8" />
+          <AdsterraSlot position="middle" className="my-8" />
 
-          <AutoAdSlot placement="bottom-sticky" />
+          <AdsterraSlot position="bottom" />
         </div>
       </div>
     </>
