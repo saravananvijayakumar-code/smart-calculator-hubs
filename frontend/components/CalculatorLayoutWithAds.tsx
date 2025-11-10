@@ -34,15 +34,11 @@ function CalculatorLayoutWithAds({
           keywords={keywords || ''}
         />
         
-        {showAd && (
-          <div className="mb-6">
-            <AdsterraSlot />
-          </div>
-        )}
+        {showAd && <AdsterraSlot position="top" className="mb-6" />}
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-4">
               <div className="mb-8">
                 <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
                 <p className="text-lg text-muted-foreground">{description}</p>
@@ -62,11 +58,7 @@ function CalculatorLayoutWithAds({
                 </div>
               )}
 
-              {showAd && (
-                <div className="my-8">
-                  <AdsterraSlot />
-                </div>
-              )}
+              {showAd && <AdsterraSlot position="middle" className="my-8" />}
 
               {tips && tips.length > 0 && (
                 <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg mt-8">
@@ -82,21 +74,7 @@ function CalculatorLayoutWithAds({
                 </div>
               )}
 
-              {showAd && (
-                <div className="mt-8">
-                  <AdsterraSlot />
-                </div>
-              )}
-            </div>
-
-            <div className="lg:col-span-1">
-              {showAd && (
-                <div className="space-y-8 sticky top-20">
-                  <div className="text-sm text-muted-foreground text-center">
-                    Advertisement
-                  </div>
-                </div>
-              )}
+              {showAd && <AdsterraSlot position="bottom" className="mt-8" />}
             </div>
           </div>
         </div>

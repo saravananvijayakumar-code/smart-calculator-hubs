@@ -91,9 +91,8 @@ export default function BlogListPageV2() {
           </div>
 
           <BlogAdSlot 
-            slot="2109876543"
-            format="horizontal"
-            className="mb-12 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-4"
+            position="top"
+            className="mb-12"
           />
 
           {loading ? (
@@ -156,9 +155,13 @@ export default function BlogListPageV2() {
               </div>
 
               <BlogAdSlot 
-                slot="5432109876"
-                format="fluid"
-                className="my-12 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4"
+                position="middle"
+                className="my-12"
+              />
+
+              <BlogAdSlot 
+                position="bottom"
+                className="mt-8"
               />
 
               {totalPages > 1 && (
