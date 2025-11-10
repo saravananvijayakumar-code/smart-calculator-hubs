@@ -5,7 +5,7 @@ import backend from "~backend/client";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, Eye, Share2 } from "lucide-react";
-import { BlogAdSlot, InContentAd } from "@/components/ads/BlogAdSlot";
+import { AdsterraSlot } from "@/components/ads/AdsterraSlot";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
@@ -223,11 +223,7 @@ export default function BlogPostPageV2() {
 
           <div className="space-y-6">
             {isReady && (
-              <BlogAdSlot 
-                slot="8765432109"
-                format="horizontal"
-                className="bg-slate-50 rounded-lg p-4"
-              />
+              <AdsterraSlot />
             )}
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -248,7 +244,7 @@ export default function BlogPostPageV2() {
               </ErrorBoundary>
             </Card>
 
-            {isReady && <InContentAd />}
+            {isReady && <AdsterraSlot />}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 bg-green-50 border border-green-200">
@@ -292,11 +288,7 @@ export default function BlogPostPageV2() {
             </Card>
 
             {isReady && (
-              <BlogAdSlot 
-                slot="3456789012"
-                format="fluid"
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-4"
-              />
+              <AdsterraSlot />
             )}
 
             <Card className="p-6 bg-amber-50 border border-amber-200">

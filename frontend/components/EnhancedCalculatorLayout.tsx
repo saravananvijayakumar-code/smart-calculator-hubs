@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { ReactNode } from 'react';
 import { ArrowLeft, Share2 as Share, BookOpen, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,7 +6,7 @@ import { Breadcrumbs } from './Breadcrumbs';
 import { RelatedCalculators } from './RelatedCalculators';
 import { AppleStyleCard, AppleStyleCardHeader } from './AppleStyleCard';
 import { AppleStyleButton } from './AppleStyleButton';
-import AmazonAffiliate from './ads/AmazonAffiliate';
+import { AdsterraSlot } from './ads/AdsterraSlot';
 
 interface EnhancedCalculatorLayoutProps {
   id: string;
@@ -55,7 +54,6 @@ export function EnhancedCalculatorLayout({
           url: window.location.href,
         });
       } catch (error) {
-        // Fallback to clipboard
         navigator.clipboard.writeText(window.location.href);
       }
     } else {
@@ -63,7 +61,6 @@ export function EnhancedCalculatorLayout({
     }
   };
 
-  // Generate structured data for FAQ
   const faqStructuredData = faqs && faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -77,7 +74,6 @@ export function EnhancedCalculatorLayout({
     }))
   } : null;
 
-  // Generate structured data for the calculator
   const calculatorStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -112,7 +108,6 @@ export function EnhancedCalculatorLayout({
         type="website"
       />
 
-      {/* Add structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -129,7 +124,6 @@ export function EnhancedCalculatorLayout({
       )}
 
       <div className="container mx-auto px-4 py-6 max-w-7xl">
-        {/* Navigation */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-4">
             <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -147,7 +141,10 @@ export function EnhancedCalculatorLayout({
           </AppleStyleButton>
         </div>
 
-        {/* Header */}
+        <div className="mb-6">
+          <AdsterraSlot />
+        </div>
+
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
             {title}
@@ -157,9 +154,7 @@ export function EnhancedCalculatorLayout({
           </p>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* Calculator Form */}
           <div className="lg:col-span-2">
             <AppleStyleCard variant="elevated" padding="lg">
               <AppleStyleCardHeader 
@@ -170,7 +165,6 @@ export function EnhancedCalculatorLayout({
             </AppleStyleCard>
           </div>
 
-          {/* Results */}
           <div className="space-y-6">
             {results && (
               <AppleStyleCard variant="elevated" padding="lg">
@@ -179,7 +173,6 @@ export function EnhancedCalculatorLayout({
               </AppleStyleCard>
             )}
 
-            {/* Quick Info */}
             <AppleStyleCard padding="lg">
               <AppleStyleCardHeader title="About This Calculator" />
               <div className="space-y-3 text-sm text-muted-foreground">
@@ -196,7 +189,6 @@ export function EnhancedCalculatorLayout({
           </div>
         </div>
 
-        {/* Detailed Explanation */}
         {explanation && (
           <AppleStyleCard className="mb-12" padding="lg">
             <AppleStyleCardHeader 
@@ -209,7 +201,10 @@ export function EnhancedCalculatorLayout({
           </AppleStyleCard>
         )}
 
-        {/* Formula */}
+        <div className="mb-12">
+          <AdsterraSlot />
+        </div>
+
         {formula && (
           <AppleStyleCard className="mb-12" padding="lg">
             <AppleStyleCardHeader 
@@ -222,7 +217,6 @@ export function EnhancedCalculatorLayout({
           </AppleStyleCard>
         )}
 
-        {/* Examples */}
         {examples && (
           <AppleStyleCard className="mb-12" padding="lg">
             <AppleStyleCardHeader 
@@ -235,7 +229,6 @@ export function EnhancedCalculatorLayout({
           </AppleStyleCard>
         )}
 
-        {/* FAQs */}
         {faqs && faqs.length > 0 && (
           <AppleStyleCard className="mb-12" padding="lg">
             <AppleStyleCardHeader 
@@ -255,12 +248,10 @@ export function EnhancedCalculatorLayout({
           </AppleStyleCard>
         )}
 
-        {/* Amazon Affiliate Ad */}
         <div className="mb-12">
-          <AmazonAffiliate calculatorTitle={title} placement="content" />
+          <AdsterraSlot />
         </div>
 
-        {/* Related Calculators */}
         <RelatedCalculators currentCalculatorId={id} limit={4} />
       </div>
     </div>

@@ -1,7 +1,6 @@
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 import { SEOHead } from './SEOHead';
-import AmazonAffiliate from './ads/AmazonAffiliate';
-import NativeBanner from './ads/NativeBanner';
+import { AdsterraSlot } from './ads/AdsterraSlot';
 import EnhancedAIAnalysis from './EnhancedAIAnalysis';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
@@ -26,10 +25,6 @@ function CalculatorLayoutWithAds({
   aiAnalysisRequest,
   showAIAnalysis = false
 }: CalculatorLayoutWithAdsProps) {
-  useEffect(() => {
-    console.log('📊 Google Auto Ads enabled for:', title);
-  }, [title]);
-
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -39,29 +34,24 @@ function CalculatorLayoutWithAds({
           keywords={keywords || ''}
         />
         
-        {/* Native Banner 1 - Top */}
         {showAd && (
           <div className="mb-6">
-            <NativeBanner position="top" />
+            <AdsterraSlot />
           </div>
         )}
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Main Content */}
             <div className="lg:col-span-3">
-              {/* Page Title */}
               <div className="mb-8">
                 <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
                 <p className="text-lg text-muted-foreground">{description}</p>
               </div>
 
-              {/* Calculator Content */}
               <div className="space-y-8">
                 {children}
               </div>
 
-              {/* AI Analysis Section */}
               {showAIAnalysis && aiAnalysisRequest && (
                 <div className="mt-8">
                   <EnhancedAIAnalysis
@@ -72,14 +62,12 @@ function CalculatorLayoutWithAds({
                 </div>
               )}
 
-              {/* Native Banner 2 - Middle */}
               {showAd && (
                 <div className="my-8">
-                  <NativeBanner position="middle" />
+                  <AdsterraSlot />
                 </div>
               )}
 
-              {/* Tips section */}
               {tips && tips.length > 0 && (
                 <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg mt-8">
                   <h3 className="text-lg font-semibold mb-4 text-blue-900 dark:text-blue-100">Tips & Information</h3>
@@ -94,28 +82,18 @@ function CalculatorLayoutWithAds({
                 </div>
               )}
 
-              {/* Amazon Affiliate Ad */}
-              {showAd && (
-                <div className="my-8">
-                  <AmazonAffiliate calculatorTitle={title} placement="content" />
-                </div>
-              )}
-
-              {/* Native Banner 3 - Bottom */}
               {showAd && (
                 <div className="mt-8">
-                  <NativeBanner position="bottom" />
+                  <AdsterraSlot />
                 </div>
               )}
             </div>
 
-            {/* Sidebar with Ads */}
             <div className="lg:col-span-1">
               {showAd && (
                 <div className="space-y-8 sticky top-20">
-                  {/* Amazon Affiliate Sidebar */}
-                  <div className="mt-8">
-                    <AmazonAffiliate calculatorTitle={title} placement="sidebar" />
+                  <div className="text-sm text-muted-foreground text-center">
+                    Advertisement
                   </div>
                 </div>
               )}

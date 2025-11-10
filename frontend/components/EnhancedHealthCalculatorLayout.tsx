@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import NativeBanner from './ads/NativeBanner';
+import { AdsterraSlot } from './ads/AdsterraSlot';
 
 interface EnhancedHealthCalculatorLayoutProps {
   children?: ReactNode;
@@ -24,11 +24,10 @@ export default function EnhancedHealthCalculatorLayout({
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Native Banner 1 - Top */}
         <div className="mb-6">
-          <NativeBanner position="top" />
+          <AdsterraSlot />
         </div>
-        {/* Header with Icon Animation */}
+        
         <div className="text-center mb-8 animate-fade-in">
           {icon && (
             <div className="flex justify-center mb-4">
@@ -46,30 +45,25 @@ export default function EnhancedHealthCalculatorLayout({
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Main Content */}
           <div className="lg:col-span-12 space-y-6">
-            {/* Main Calculator Content */}
             <div className="space-y-6">
               {calculatorContent || children}
             </div>
 
-            {/* Native Banner 2 - Middle */}
             <div className="my-8">
-              <NativeBanner position="middle" />
+              <AdsterraSlot />
             </div>
           </div>
         </div>
 
-        {/* Educational Content */}
         {educationalContent && (
           <div className="mt-8">
             {educationalContent}
           </div>
         )}
 
-        {/* Native Banner 3 - Bottom */}
         <div className="mt-8">
-          <NativeBanner position="bottom" />
+          <AdsterraSlot />
         </div>
       </div>
 
