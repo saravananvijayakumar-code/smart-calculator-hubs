@@ -144,6 +144,43 @@ export function ContactPage() {
           </div>
         </div>
 
+        {/* Important Disclaimer */}
+        <div className="mt-16 mb-8">
+          <Card className="border-yellow-200 bg-yellow-50">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-yellow-900">
+                ⚠️ Important Legal Disclaimer
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3 text-sm text-yellow-900">
+                <p>
+                  <strong>Not Professional Advice:</strong> Smart Calculator Hub provides calculators and tools for informational 
+                  and educational purposes only. Our calculators, AI analysis, and content do NOT constitute professional financial, 
+                  tax, legal, investment, or medical advice.
+                </p>
+                <p>
+                  <strong>No Warranties:</strong> Results are estimates based on the inputs you provide and standard formulas. 
+                  We make no warranties or guarantees about the accuracy, completeness, reliability, or suitability of any 
+                  calculator results or information provided.
+                </p>
+                <p>
+                  <strong>Consult Professionals:</strong> Always consult with qualified professionals (financial advisors, 
+                  tax accountants, lawyers, medical professionals, etc.) before making any important decisions based on 
+                  calculator results or information from this website.
+                </p>
+                <p>
+                  <strong>Use at Your Own Risk:</strong> You acknowledge that you use our calculators and information at your 
+                  own risk and are solely responsible for any decisions you make.
+                </p>
+                <p className="pt-2 border-t border-yellow-300">
+                  By using this website, you agree to our <Link to="/terms" className="underline font-semibold">Terms of Service</Link> and <Link to="/privacy" className="underline font-semibold">Privacy Policy</Link>.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* FAQ Section */}
         <div className="mt-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
@@ -154,8 +191,9 @@ export function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Yes, all our calculators use industry-standard formulas and are thoroughly tested. 
-                  However, always consult with professionals for important financial or health decisions.
+                  Our calculators use industry-standard formulas and are designed to provide helpful estimates. 
+                  However, results are estimates only and should not be considered professional advice. 
+                  Always consult with qualified professionals for important financial, health, or legal decisions.
                 </p>
               </CardContent>
             </Card>
@@ -178,8 +216,9 @@ export function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  No, we don't store your personal calculation data. All calculations are 
-                  performed locally in your browser for privacy and security.
+                  We do not store your personal calculation inputs or financial data. All calculations are 
+                  performed in your browser or processed temporarily on our servers without retention. 
+                  See our Privacy Policy for complete details.
                 </p>
               </CardContent>
             </Card>

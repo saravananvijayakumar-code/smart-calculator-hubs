@@ -61,9 +61,9 @@ export function PrivacyPage() {
               Last updated: {new Date().toLocaleDateString()}
             </p>
             <p>
-              Smart Calculator Hub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy 
+              Smart Calculator Hub, operated by Quantum Leap Ventures Pvt Ltd ("we," "our," or "us"), is committed to protecting your privacy. This Privacy Policy 
               explains how we collect, use, disclose, and safeguard your information when you visit our 
-              website and use our financial calculators.
+              website and use our calculators and tools.
             </p>
           </div>
 
@@ -102,11 +102,18 @@ export function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Data Security</h2>
-            <p>
-              We implement appropriate technical and organizational security measures to protect your 
-              personal information against unauthorized access, alteration, disclosure, or destruction. 
-              However, no internet transmission is completely secure, and we cannot guarantee absolute security.
+            <p className="mb-4">
+              We implement reasonable technical and organizational security measures to protect your 
+              personal information against unauthorized access, alteration, disclosure, or destruction.
             </p>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <p className="text-sm font-semibold text-yellow-900 mb-2">⚠️ Security Disclaimer</p>
+              <p className="text-sm text-yellow-800">
+                While we take reasonable steps to protect your information, no method of transmission over the Internet 
+                or electronic storage is 100% secure. We cannot guarantee absolute security of your data. You use our 
+                services at your own risk.
+              </p>
+            </div>
           </section>
 
           <section>
@@ -223,11 +230,27 @@ export function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-            <p>
-              If you have any questions about this Privacy Policy, please contact us through our 
-              contact page or email us directly.
+            <h2 className="text-2xl font-semibold mb-4">Jurisdictional Compliance</h2>
+            <p className="mb-4">
+              Smart Calculator Hub operates internationally and complies with applicable privacy laws in the jurisdictions 
+              we serve, including GDPR (European Union), CCPA (California), and other regional privacy regulations where applicable.
             </p>
+            <p>
+              Depending on your location, you may have additional rights under local privacy laws. Please contact us 
+              to exercise any rights available to you under applicable law.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+            <p className="mb-4">
+              If you have any questions about this Privacy Policy, please contact us:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Email: saravananvijayakumar@quantumleapventures.com.au</li>
+              <li>Company: Quantum Leap Ventures Pvt Ltd</li>
+              <li>Through our contact page at <Link to="/contact" className="text-blue-600 hover:underline">/contact</Link></li>
+            </ul>
           </section>
         </div>
       </div>

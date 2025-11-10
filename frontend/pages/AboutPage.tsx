@@ -212,7 +212,7 @@ export function AboutPage() {
                 <p className="text-lg mb-6 leading-relaxed">
                   Understanding that financial systems vary dramatically across countries, we've built dedicated 
                   calculation engines for each major market we serve. Our platform isn't just translated—it's 
-                  completely localized to reflect the unique financial landscape of each region.
+                  localized to reflect the unique financial landscape of each region.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -267,7 +267,8 @@ export function AboutPage() {
                   <p className="text-muted-foreground">
                     Every calculation undergoes rigorous testing and validation. Our AI-enhanced algorithms are built 
                     on verified financial models and are continuously updated to reflect current regulations, market 
-                    conditions, and economic realities. We maintain 99.99% calculation accuracy across all our tools.
+                    conditions, and economic realities. We strive to provide accurate and reliable results to support 
+                    your financial planning decisions.
                   </p>
                 </CardContent>
               </Card>
@@ -501,31 +502,19 @@ export function AboutPage() {
 
           {/* Updated Stats */}
           <div className="bg-gradient-to-r from-primary/5 to-purple-100 rounded-lg p-8 text-center mb-16">
-            <h3 className="text-2xl font-bold mb-8">SmartCalculatorHub Impact</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <h3 className="text-2xl font-bold mb-8">SmartCalculatorHub Features</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               <div>
                 <div className="text-3xl font-bold text-primary">4</div>
-                <div className="text-sm text-muted-foreground">Countries Served</div>
+                <div className="text-sm text-muted-foreground">Countries Supported</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary">50+</div>
                 <div className="text-sm text-muted-foreground">AI-Enhanced Calculators</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">1.2M+</div>
-                <div className="text-sm text-muted-foreground">Monthly Active Users</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">99.9%</div>
-                <div className="text-sm text-muted-foreground">Platform Uptime</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">15M+</div>
-                <div className="text-sm text-muted-foreground">Calculations Processed</div>
-              </div>
-              <div>
                 <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">AI Analysis Available</div>
+                <div className="text-sm text-muted-foreground">Available Access</div>
               </div>
             </div>
           </div>
@@ -538,16 +527,26 @@ export function AboutPage() {
             <CardContent>
               <p className="text-lg mb-6 leading-relaxed">
                 Whether you're planning your first home purchase, optimizing your investment portfolio, or preparing 
-                for retirement, SmartCalculatorHub's AI-powered tools are here to guide you every step of the way. 
-                Join millions of users who trust us with their most important financial decisions.
+                for retirement, SmartCalculatorHub's AI-powered tools are here to assist you with financial estimates 
+                and insights. Our calculators are designed to help you explore different financial scenarios.
               </p>
+              
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                <p className="text-sm font-semibold text-yellow-900 mb-2">⚠️ Important Disclaimer</p>
+                <p className="text-sm text-yellow-800">
+                  The calculators and AI analysis provided on this website are for informational and educational purposes only. 
+                  They should not be considered as professional financial, tax, legal, or investment advice. Results are estimates 
+                  based on the information you provide and may not reflect actual outcomes. Always consult with qualified professionals 
+                  before making important financial decisions.
+                </p>
+              </div>
               
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h4 className="font-semibold mb-4">Why Users Choose SmartCalculatorHub:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span className="text-sm">Accurate, country-specific calculations</span>
+                    <span className="text-sm">Country-specific calculation tools</span>
                   </div>
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
